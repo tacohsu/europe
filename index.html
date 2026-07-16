@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>荷比法 12 天慢旅行｜媽媽同行版・Christmas in Europe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#132836;        /* 冬夜 */
+  --pine:#1E4438;         /* 松綠 */
+  --pine-soft:#2E5C4B;
+  --wine:#8C2F39;         /* 熱紅酒 */
+  --wine-soft:#A94A52;
+  --gold:#C9973F;         /* 市集燈串 */
+  --gold-soft:#E3BC6E;
+  --snow:#F6F2EA;         /* 雪紙底 */
+  --card:#FFFFFF;
+  --ink:#2B2A26;
+  --muted:#6E685C;
+  --line:#E4DCCC;
+  --ams:#C9973F;          /* 阿姆斯特丹＝暖金 */
+  --bru:#8C2F39;          /* 布魯塞爾＝酒紅 */
+  --lux:#1E4438;          /* 巴黎＝松綠 */
+  --radius:16px;
+  --shadow:0 6px 22px rgba(19,40,54,.10);
+  --zh:'Noto Sans TC',"PingFang TC","Microsoft JhengHei",sans-serif;
+  --zh-serif:'Noto Serif TC',serif;
+  --en:'Cormorant Garamond',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--zh);color:var(--ink);background:var(--snow);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--pine-soft);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+img{max-width:100%}
+
+/* ===== Hero ===== */
+.hero{position:relative;color:#F8F4E9;overflow:hidden;text-align:center;
+  background:linear-gradient(180deg,#0E1F2B 0%,#132836 40%,#1E4438 88%,#173427 100%);
+  padding:64px 20px 0}
+.hero-inner{position:relative;z-index:3;max-width:760px;margin:0 auto}
+.hero .eyebrow{font-family:var(--en);letter-spacing:.42em;font-size:.85rem;font-weight:600;color:var(--gold-soft);text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:var(--zh-serif);font-weight:900;font-size:clamp(1.9rem,5.4vw,3.1rem);letter-spacing:.06em;line-height:1.3}
+.hero .sub{margin-top:12px;font-size:clamp(.95rem,2.6vw,1.1rem);color:#E9E2CF;letter-spacing:.12em}
+.hero .season{display:inline-block;margin-top:18px;padding:7px 20px;border:1px solid rgba(227,188,110,.55);border-radius:999px;color:var(--gold-soft);font-size:.88rem;letter-spacing:.14em}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+.hero-badges span{background:rgba(255,255,255,.09);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 16px;font-size:.85rem;letter-spacing:.05em}
+.hero-badges b{color:var(--gold-soft);font-weight:700}
+/* 屋頂剪影 */
+.skyline{position:relative;z-index:2;display:block;width:100%;margin-top:44px}
+/* 燈串 */
+.lights{position:absolute;inset:0;z-index:1;pointer-events:none}
+.lights i{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--gold-soft);opacity:.7;box-shadow:0 0 10px 2px rgba(227,188,110,.55);animation:twinkle 3.4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:.9}}
+/* 飄雪 */
+.snowfield{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.flake{position:absolute;top:-12px;color:rgba(255,255,255,.85);font-size:10px;animation:fall linear infinite}
+@keyframes fall{
+  0%{transform:translate3d(0,-10px,0) rotate(0deg);opacity:0}
+  8%{opacity:.9}
+  100%{transform:translate3d(28px,110vh,0) rotate(320deg);opacity:.15}
+}
+@media (prefers-reduced-motion:reduce){
+  .flake,.lights i{animation:none}
+  .flake{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* ===== 版面 ===== */
+.wrap{max-width:920px;margin:0 auto;padding:0 18px}
+section{padding:52px 0 8px}
+.sec-head{text-align:center;margin-bottom:30px}
+.sec-head .en{font-family:var(--en);letter-spacing:.34em;font-size:.8rem;font-weight:600;color:var(--gold);text-transform:uppercase}
+.sec-head h2{font-family:var(--zh-serif);font-weight:900;font-size:clamp(1.4rem,3.6vw,1.9rem);letter-spacing:.08em;margin-top:6px}
+.sec-head p{color:var(--muted);font-size:.92rem;margin-top:8px}
+
+/* 卡片 */
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 22px;border:1px solid var(--line)}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+/* 設計重點 */
+.point{display:flex;gap:14px;align-items:flex-start}
+.point .ico{flex:none;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;background:linear-gradient(150deg,#FBF3E2,#F1E3C4);border:1px solid #EAD9B4}
+.point h3{font-size:1rem;font-weight:700;letter-spacing:.04em}
+.point p{font-size:.9rem;color:var(--muted);margin-top:2px}
+
+/* 路線 */
+.route{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+@media (max-width:720px){.route{grid-template-columns:1fr}}
+.route .leg{border-radius:var(--radius);padding:20px 18px;color:#fff;position:relative;overflow:hidden}
+.leg.ams{background:linear-gradient(150deg,#B07F2C,#C9973F)}
+.leg.bru{background:linear-gradient(150deg,#732630,#8C2F39)}
+.leg.lux{background:linear-gradient(150deg,#173427,#1E4438)}
+.leg .en{font-family:var(--en);letter-spacing:.22em;font-size:.72rem;text-transform:uppercase;opacity:.85}
+.leg h3{font-family:var(--zh-serif);font-weight:700;font-size:1.2rem;margin-top:4px}
+.leg .nights{margin-top:8px;font-size:.86rem;background:rgba(255,255,255,.16);display:inline-block;border-radius:999px;padding:3px 12px}
+.leg ul{margin-top:12px;list-style:none;font-size:.86rem;line-height:1.9}
+.leg li::before{content:"❄";margin-right:8px;font-size:.7rem;opacity:.8}
+.route-tail{margin-top:14px;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* 交通與天氣 */
+.info-card h3{font-family:var(--zh-serif);font-size:1.08rem;font-weight:700;letter-spacing:.05em;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.info-card ul{list-style:none;font-size:.92rem}
+.info-card li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:9px;align-items:flex-start}
+.info-card li:last-child{border-bottom:none}
+.info-card li::before{content:"·";color:var(--gold);font-weight:900;font-size:1.2rem;line-height:1.4}
+.tip{margin-top:12px;background:#FBF4E4;border-left:4px solid var(--gold);border-radius:8px;padding:10px 14px;font-size:.88rem;color:#6B5423}
+
+/* 每日導覽列 */
+.daynav{position:sticky;top:0;z-index:50;background:rgba(246,242,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0}
+.daynav .rail{display:flex;gap:8px;overflow-x:auto;padding:2px 18px;scrollbar-width:none}
+.daynav .rail::-webkit-scrollbar{display:none}
+.chip{flex:none;border:none;cursor:pointer;font-family:var(--zh);font-size:.83rem;font-weight:700;padding:7px 14px;border-radius:999px;background:#fff;border:1.5px solid var(--line);color:var(--muted);transition:.18s}
+.chip small{display:block;font-weight:500;font-size:.68rem;letter-spacing:.03em}
+.chip.c-ams.active,.chip.c-ams:hover{background:var(--ams);border-color:var(--ams);color:#fff}
+.chip.c-bru.active,.chip.c-bru:hover{background:var(--bru);border-color:var(--bru);color:#fff}
+.chip.c-lux.active,.chip.c-lux:hover{background:var(--lux);border-color:var(--lux);color:#fff}
+.chip.c-end.active,.chip.c-end:hover{background:var(--night);border-color:var(--night);color:#fff}
+
+/* Day 卡片 */
+.day{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line);margin-bottom:26px;overflow:hidden;scroll-margin-top:86px}
+.day-head{padding:18px 22px;color:#fff;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.day-head.ams{background:linear-gradient(120deg,#B07F2C,#C9973F)}
+.day-head.bru{background:linear-gradient(120deg,#732630,#8C2F39)}
+.day-head.lux{background:linear-gradient(120deg,#173427,#2E5C4B)}
+.day-head.end{background:linear-gradient(120deg,#0E1F2B,#294257)}
+.day-head .dnum{font-family:var(--en);font-weight:700;font-size:1.05rem;letter-spacing:.16em}
+.day-head h3{font-family:var(--zh-serif);font-weight:700;font-size:1.15rem;letter-spacing:.05em}
+.day-head .base{margin-left:auto;font-size:.8rem;background:rgba(255,255,255,.18);border-radius:999px;padding:3px 12px}
+.day-body{padding:8px 22px 20px}
+.tl{list-style:none}
+.tl li{position:relative;padding:14px 0 14px 92px;border-bottom:1px dashed var(--line)}
+.tl li:last-child{border-bottom:none}
+.tl .t{position:absolute;left:0;top:16px;width:76px;text-align:right;font-family:var(--en);font-weight:700;font-size:.95rem;color:var(--muted);letter-spacing:.03em}
+.tl .what{font-weight:700;font-size:.98rem}
+.tl .what a{border-bottom:1px dotted var(--pine-soft)}
+.tl .mom{margin-top:4px;font-size:.86rem;color:#8A5A2B;background:#FBF4E4;border-radius:8px;padding:6px 10px;display:inline-block}
+.tl .mom::before{content:"👵 ";font-size:.85rem}
+.day-note{margin:6px 22px 20px;background:#F2F0E8;border-radius:10px;padding:12px 16px;font-size:.88rem;color:var(--muted)}
+.day-note b{color:var(--ink)}
+.day-note ul{list-style:none}
+.day-note li{padding:2px 0}
+.day-note li::before{content:"✦";color:var(--gold);margin-right:8px;font-size:.72rem}
+@media (max-width:560px){
+  .tl li{padding-left:0;padding-top:12px}
+  .tl .t{position:static;display:block;text-align:left;width:auto;margin-bottom:2px}
+}
+
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#F1EDE1;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+td b{color:var(--wine)}
+.tbl-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line)}
+.total{margin-top:12px;text-align:center;font-size:.95rem;background:linear-gradient(120deg,#FBF3E2,#F5E7C8);border-radius:10px;padding:12px;border:1px solid #EAD9B4}
+.total b{color:var(--wine);font-size:1.05rem}
+
+/* 勾選清單 */
+.check-group h3{font-family:var(--zh-serif);font-size:1.02rem;font-weight:700;letter-spacing:.05em;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.progress{height:8px;border-radius:99px;background:#EDE7D8;overflow:hidden;margin-bottom:12px}
+.progress i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));transition:width .35s ease}
+.check-group.wine .progress i{background:linear-gradient(90deg,var(--wine),var(--wine-soft))}
+.check-group.pine .progress i{background:linear-gradient(90deg,var(--pine),var(--pine-soft))}
+.check-group.night .progress i{background:linear-gradient(90deg,#294257,#4E6E8C)}
+.ck{list-style:none}
+.ck li{border-bottom:1px dashed var(--line)}
+.ck li:last-child{border-bottom:none}
+.ck label{display:flex;gap:10px;align-items:flex-start;padding:8px 2px;cursor:pointer;font-size:.92rem}
+.ck input{margin-top:5px;width:17px;height:17px;accent-color:var(--pine);flex:none;cursor:pointer}
+.ck input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(140,47,57,.5)}
+
+/* 預訂時間軸 */
+.book-tl{list-style:none;position:relative;padding-left:26px}
+.book-tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--wine),var(--pine))}
+.book-tl li{position:relative;padding:0 0 22px 14px}
+.book-tl li::before{content:"";position:absolute;left:-24px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--gold)}
+.book-tl li:nth-child(2)::before{border-color:#C08840}
+.book-tl li:nth-child(3)::before{border-color:var(--wine)}
+.book-tl li:nth-child(4)::before{border-color:var(--pine-soft)}
+.book-tl li:nth-child(5)::before{border-color:var(--pine)}
+.book-tl h3{font-size:.98rem;font-weight:700;letter-spacing:.04em}
+.book-tl p{font-size:.9rem;color:var(--muted);margin-top:2px}
+
+/* 官方連結 */
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:640px){.links{grid-template-columns:1fr}}
+.links a{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.18s;color:var(--ink)}
+.links a:hover{text-decoration:none;border-color:var(--gold);transform:translateY(-2px);box-shadow:var(--shadow)}
+.links b{display:block;font-size:.95rem}
+.links span{font-size:.82rem;color:var(--muted)}
+
+/* Footer */
+footer{margin-top:60px;background:var(--night);color:#C9C3B2;text-align:center;padding:34px 18px 44px;font-size:.85rem;line-height:2}
+footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);font-size:.8rem;text-transform:uppercase}
+.top-btn{position:fixed;right:16px;bottom:18px;z-index:60;width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;background:var(--pine);color:#fff;font-size:1.1rem;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s}
+.top-btn.show{opacity:.92;pointer-events:auto}
+</style>
+</head>
+<body>
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="snowfield" id="snow"></div>
+  <div class="lights" id="lights"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Christmas in Benelux</div>
+    <h1>荷比法 12 天慢旅行</h1>
+    <div class="sub">媽媽同行版｜荷蘭・比利時・法國</div>
+    <div class="season">建議季節｜12 月上旬至中旬</div>
+    <div class="hero-badges">
+      <span>🏠 <b>4 晚</b> 阿姆斯特丹</span>
+      <span>🏠 <b>4 晚</b> 布魯塞爾</span>
+      <span>🏠 <b>2 晚</b> 巴黎</span>
+      <span>🚄 跨國只移動 <b>2 次</b></span>
+    </div>
+  </div>
+  <!-- 阿姆斯特丹山形屋頂剪影 -->
+  <svg class="skyline" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#F6F2EA" d="M0,150 L0,90 L40,90 L40,60 L60,40 L80,60 L80,95 L120,95 L120,55 L145,30 L170,55 L170,90 L210,90 L210,70 L230,50 L235,55 L240,50 L260,70 L260,100 L300,100 L300,50 L330,20 L360,50 L360,92 L400,92 L400,65 L420,45 L440,65 L440,98 L480,98 L480,58 L505,33 L530,58 L530,95 L575,95 L575,72 L595,52 L615,72 L615,100 L655,100 L655,48 L685,18 L715,48 L715,92 L755,92 L755,66 L775,46 L795,66 L795,98 L835,98 L835,55 L860,30 L885,55 L885,95 L925,95 L925,70 L945,50 L965,70 L965,100 L1005,100 L1005,52 L1035,22 L1065,52 L1065,93 L1105,93 L1105,62 L1125,42 L1145,62 L1145,90 L1200,90 L1200,150 Z"/>
+    <g fill="#132836" opacity=".55">
+      <rect x="50" y="58" width="10" height="12" rx="2"/><rect x="135" y="52" width="10" height="12" rx="2"/>
+      <rect x="325" y="46" width="10" height="12" rx="2"/><rect x="500" y="55" width="10" height="12" rx="2"/>
+      <rect x="680" y="44" width="10" height="12" rx="2"/><rect x="855" y="52" width="10" height="12" rx="2"/>
+      <rect x="1030" y="48" width="10" height="12" rx="2"/>
+    </g>
+  </svg>
+</header>
+
+<main class="wrap">
+
+<!-- ============ 設計重點 ============ -->
+<section id="concept">
+  <div class="sec-head">
+    <div class="en">Slow Travel Design</div>
+    <h2>旅行設計重點</h2>
+    <p>這份行程特別為母子／母女同行設計：暖色聖誕・少換飯店・少趕車・雨天有備案</p>
+  </div>
+  <div class="grid grid-2">
+    <div class="card point"><div class="ico">👣</div><div><h3>每天 8,000–12,000 步</h3><p>每天只排 1–2 個重點，不追求打卡數量。</p></div></div>
+    <div class="card point"><div class="ico">☕</div><div><h3>走 60–90 分鐘就休息</h3><p>連續步行後安排座位或咖啡館，午休與咖啡時間都保留。</p></div></div>
+    <div class="card point"><div class="ico">🧳</div><div><h3>跨國只移動兩次</h3><p>避免天天拖行李；石板路城市以小包出發，大行李留在住宿據點。</p></div></div>
+    <div class="card point"><div class="ico">🌆</div><div><h3>配合 12 月天黑時間</h3><p>約 16:30 天黑，戶外景點集中在 09:30–15:30，晚上留給聖誕市集與休息。</p></div></div>
+  </div>
+</section>
+
+<!-- ============ 路線總覽 ============ -->
+<section id="route">
+  <div class="sec-head">
+    <div class="en">Route Overview</div>
+    <h2>路線總覽</h2>
+  </div>
+  <div class="route">
+    <div class="leg ams">
+      <div class="en">Amsterdam</div>
+      <h3>阿姆斯特丹</h3>
+      <div class="nights">第 1–4 晚</div>
+      <ul><li>運河遊船・老城散步</li><li>國家博物館</li><li>贊丹／風車村半日</li></ul>
+    </div>
+    <div class="leg bru">
+      <div class="en">Brussels</div>
+      <h3>布魯塞爾</h3>
+      <div class="nights">第 5–8 晚</div>
+      <ul><li>大廣場・Winter Wonders</li><li>布魯日一日遊</li><li>根特一日遊</li></ul>
+    </div>
+    <div class="leg lux">
+      <div class="en">Paris</div>
+      <h3>巴黎</h3>
+      <div class="nights">第 9–10 晚</div>
+      <ul><li>塞納河遊船・聖誕燈飾</li><li>奧塞或羅浮宮擇一</li><li>老佛爺聖誕櫥窗</li></ul>
+    </div>
+  </div>
+  <p class="route-tail">第 11 天移往戴高樂機場區（或依航班改回阿姆斯特丹）→ 第 12 天返台 ✈️</p>
+</section>
+
+<!-- ============ 交通與天氣 ============ -->
+<section id="info">
+  <div class="sec-head">
+    <div class="en">Transport & Weather</div>
+    <h2>交通核心與 12 月裝備</h2>
+  </div>
+  <div class="grid grid-2">
+    <div class="card info-card">
+      <h3>🚄 交通核心</h3>
+      <ul>
+        <li>荷蘭境內大眾運輸：感應式信用卡或手機即可進出站。</li>
+        <li>阿姆斯特丹 → 布魯塞爾：直達跨國列車最快約 2 小時 8 分。</li>
+        <li>比利時城市間以 SNCB 國鐵為主；布魯塞爾 → 布魯日平均約 1 小時 4 分。</li>
+        <li>布魯塞爾 → 巴黎：Eurostar 直達最快約 1 小時 22 分，務必提早訂票。</li>
+        <li>巴黎地鐵樓梯多、電梯少；市區短程建議多用公車或計程車，較適合媽媽。</li>
+      </ul>
+      <div class="tip">💡 跨國列車建議提早訂票並選位；市區短程保留彈性，前一晚再依天氣決定。</div>
+    </div>
+    <div class="card info-card">
+      <h3>🧣 12 月天氣與裝備</h3>
+      <ul>
+        <li>白天約 3–8°C，夜間接近 0°C；濕冷與風會讓體感更低。</li>
+        <li>防風防潑水羽絨外套＋發熱衣＋羊毛或刷毛中層。</li>
+        <li>防水止滑鞋比厚重雪靴實用，老城石板路尤其需要抓地力。</li>
+        <li>圍巾、手套、毛帽、暖暖包與小型保溫瓶。</li>
+      </ul>
+      <div class="tip">⚠️ 不建議只帶雨傘：強風時以連帽防水外套更可靠。</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 每日導覽 ============ -->
+<nav class="daynav" aria-label="每日行程導覽">
+  <div class="rail" id="dayRail"></div>
+</nav>
+
+<main class="wrap">
+<section id="days" style="padding-top:36px">
+  <div class="sec-head">
+    <div class="en">Day by Day</div>
+    <h2>每日行程</h2>
+    <p>點上方日期快速跳轉｜👵 為媽媽同行提醒</p>
+  </div>
+  <!-- DAY 1 -->
+  <article class="day" id="d1">
+    <div class="day-head ams"><span class="dnum">DAY 1</span><h3>抵達阿姆斯特丹・只安排入住</h3><span class="base">📍 阿姆斯特丹</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">抵達後</span><div class="what">機場搭火車或預約接送前往飯店</div><div class="mom">第一天不排景點，先補水、吃熱食、調整時差</div></li>
+      <li><span class="t">傍晚</span><div class="what">飯店附近超市與簡單晚餐</div><div class="mom">走路控制在 20–30 分鐘內</div></li>
+      <li><span class="t">晚上</span><div class="what">整理隔日用品、提早休息</div><div class="mom">洗澡後補充乳液，冬季室內暖氣較乾</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>住宿優先：Amsterdam Centraal、Zuid 或可搭電車直達市中心的區域。</li>
+      <li>若班機晚到，建議直接住 Schiphol 機場附近一晚，隔日再進城。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day" id="d2">
+    <div class="day-head ams"><span class="dnum">DAY 2</span><h3>阿姆斯特丹經典初見</h3><span class="base">📍 阿姆斯特丹</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:30</span><div class="what"><a href="https://maps.google.com/?q=Dam+Square+Amsterdam" target="_blank" rel="noopener">水壩廣場</a>、王宮外觀、老城散步</div><div class="mom">上午精神最好，先安排戶外拍照</div></li>
+      <li><span class="t">11:30</span><div class="what">運河區午餐</div><div class="mom">選有室內座位與廁所的餐廳</div></li>
+      <li><span class="t">13:30</span><div class="what">阿姆斯特丹運河遊船</div><div class="mom">坐著看城市，最適合第一個完整日</div></li>
+      <li><span class="t">15:30</span><div class="what"><a href="https://maps.google.com/?q=De+9+Straatjes+Amsterdam" target="_blank" rel="noopener">九街區</a>咖啡或逛店</div><div class="mom">視體力縮短；天黑後返回飯店休息</div></li>
+      <li><span class="t">18:00</span><div class="what">晚餐</div><div class="mom">避免太晚用餐，保留恢復時間</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>運河船優先選有暖氣、封閉式船艙、廁所資訊清楚的班次。</li>
+      <li>不要同一天再塞紅燈區與大型博物館。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day" id="d3">
+    <div class="day-head ams"><span class="dnum">DAY 3</span><h3>國家博物館＋博物館廣場</h3><span class="base">📍 阿姆斯特丹</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:45</span><div class="what"><a href="https://maps.google.com/?q=Rijksmuseum+Amsterdam" target="_blank" rel="noopener">國家博物館 Rijksmuseum</a></div><div class="mom">預約時段，館內有座椅與咖啡館</div></li>
+      <li><span class="t">12:30</span><div class="what">博物館區午餐</div><div class="mom">安排完整 60–90 分鐘休息</div></li>
+      <li><span class="t">14:00</span><div class="what">梵谷博物館或 Moco（二選一）</div><div class="mom">媽媽若不愛看展，可改高級百貨或下午茶</div></li>
+      <li><span class="t">16:00</span><div class="what"><a href="https://maps.google.com/?q=Museumplein+Amsterdam" target="_blank" rel="noopener">Museumplein</a> 冬季活動／聖誕市集</div><div class="mom">2026 日期仍以出發前公告為準</div></li>
+      <li><span class="t">18:00</span><div class="what">回飯店或附近晚餐</div><div class="mom">保持彈性</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>大型博物館一天最多兩間。</li>
+      <li>若膝蓋容易累，可只選國家博物館，下午改運河旁咖啡館。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day" id="d4">
+    <div class="day-head ams"><span class="dnum">DAY 4</span><h3>贊丹・桑斯安斯風車村半日</h3><span class="base">📍 阿姆斯特丹往返</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:30</span><div class="what">搭車前往 Zaandam／<a href="https://maps.google.com/?q=Zaanse+Schans" target="_blank" rel="noopener">Zaanse Schans</a></div><div class="mom">避開太早出門與通勤尖峰</div></li>
+      <li><span class="t">10:30</span><div class="what">風車村、木鞋工坊、起司店</div><div class="mom">戶外風大，停留約 2.5–3 小時即可</div></li>
+      <li><span class="t">13:30</span><div class="what">贊丹午餐</div><div class="mom">室內休息並避開午後低溫</div></li>
+      <li><span class="t">15:30</span><div class="what">返回阿姆斯特丹</div><div class="mom">晚上不再排遠距離活動</div></li>
+      <li><span class="t">17:30</span><div class="what">自由晚餐</div><div class="mom">可買熟食回飯店</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>風車村地面可能濕滑，務必穿防水止滑鞋。</li>
+      <li>天候惡劣時改成阿姆斯特丹室內日：海事博物館＋中央圖書館。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day" id="d5">
+    <div class="day-head bru"><span class="dnum">DAY 5</span><h3>跨國移動至布魯塞爾</h3><span class="base">📍 阿姆斯特丹 → 布魯塞爾</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:30</span><div class="what">退房後前往車站</div><div class="mom">預留電梯與找月台時間</div></li>
+      <li><span class="t">11:00 前後</span><div class="what">搭直達跨國列車（約 2 小時 8 分）</div><div class="mom">大行李放置區可能離座位較遠，貴重物隨身</div></li>
+      <li><span class="t">13:30</span><div class="what">抵達、入住或寄放行李</div><div class="mom">住宿選 Brussels Central／De Brouckère 一帶較方便</div></li>
+      <li><span class="t">15:30</span><div class="what"><a href="https://maps.google.com/?q=Grand+Place+Brussels" target="_blank" rel="noopener">大廣場</a>、尿尿小童、皇家拱廊</div><div class="mom">以平坦路線慢走</div></li>
+      <li><span class="t">18:00</span><div class="what">Winter Wonders 聖誕市集</div><div class="mom">2026 官方日期：11/27–2027/1/3</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>跨國移動日只排布魯塞爾市中心散步。</li>
+      <li>避免住 Brussels Midi 車站周邊偏僻街區，晚間移動以計程車為優先。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 6 -->
+  <article class="day" id="d6">
+    <div class="day-head bru"><span class="dnum">DAY 6</span><h3>布魯塞爾城市慢遊</h3><span class="base">📍 布魯塞爾</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:45</span><div class="what"><a href="https://maps.google.com/?q=Mont+des+Arts+Brussels" target="_blank" rel="noopener">皇家廣場、藝術山</a></div><div class="mom">階梯多，可搭公車／計程車到高處後往下走</div></li>
+      <li><span class="t">11:30</span><div class="what">樂器博物館或馬格利特博物館（二選一）</div><div class="mom">保留體力</div></li>
+      <li><span class="t">13:30</span><div class="what">午餐＋比利時鬆餅</div><div class="mom">安排室內長休息</div></li>
+      <li><span class="t">15:30</span><div class="what"><a href="https://maps.google.com/?q=Cathedral+of+St.+Michael+and+St.+Gudula+Brussels" target="_blank" rel="noopener">聖米歇爾古都勒主教座堂</a></div><div class="mom">免費或低負擔景點</div></li>
+      <li><span class="t">17:00</span><div class="what">聖誕市集自由逛</div><div class="mom">累了可直接回飯店</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>布魯塞爾高低差比想像中明顯；路線採「上坡搭車、下坡步行」。</li>
+      <li>市集人多時將側背包放胸前。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 7 -->
+  <article class="day" id="d7">
+    <div class="day-head bru"><span class="dnum">DAY 7</span><h3>布魯日童話古城一日</h3><span class="base">📍 布魯塞爾往返</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:15</span><div class="what">搭直達火車前往布魯日</div><div class="mom">車程約 1 小時；抵達後可搭公車進古城</div></li>
+      <li><span class="t">10:45</span><div class="what"><a href="https://maps.google.com/?q=Minnewater+Bruges" target="_blank" rel="noopener">愛之湖</a>、貝居安會院外圍</div><div class="mom">先走較安靜區域</div></li>
+      <li><span class="t">12:00</span><div class="what"><a href="https://maps.google.com/?q=Markt+Bruges" target="_blank" rel="noopener">市集廣場</a>午餐</div><div class="mom">選可訂位餐廳，避免寒風中排隊</div></li>
+      <li><span class="t">14:00</span><div class="what">鐘樓廣場、運河散步／遊船視季節</div><div class="mom">不安排登鐘樓</div></li>
+      <li><span class="t">15:30</span><div class="what">巧克力店與咖啡時間</div><div class="mom">石板路走累時立即休息</div></li>
+      <li><span class="t">17:00</span><div class="what">返回布魯塞爾</div><div class="mom">晚餐從簡</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>不拖行李進布魯日，當日往返更輕鬆。</li>
+      <li>媽媽若膝蓋不適，從車站直接搭公車到 Markt。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 8 -->
+  <article class="day" id="d8">
+    <div class="day-head bru"><span class="dnum">DAY 8</span><h3>根特一日・比布魯日更生活化</h3><span class="base">📍 布魯塞爾往返</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:30</span><div class="what">火車前往 Gent-Sint-Pieters</div><div class="mom">抵達後搭電車進舊城</div></li>
+      <li><span class="t">10:45</span><div class="what"><a href="https://maps.google.com/?q=St+Michael's+Bridge+Ghent" target="_blank" rel="noopener">聖米歇爾橋</a>、香草河岸</div><div class="mom">拍照重點集中、距離不長</div></li>
+      <li><span class="t">12:15</span><div class="what">老城午餐</div><div class="mom">可品嘗燉牛肉、薯條</div></li>
+      <li><span class="t">14:00</span><div class="what"><a href="https://maps.google.com/?q=Gravensteen+Ghent" target="_blank" rel="noopener">格拉文斯丁城堡</a>外觀／市中心教堂</div><div class="mom">城堡階梯多，原則上不入內</div></li>
+      <li><span class="t">15:30</span><div class="what">咖啡館休息</div><div class="mom">天氣佳再加短程散步</div></li>
+      <li><span class="t">17:00</span><div class="what">返回布魯塞爾</div><div class="mom">整理隔日移動行李</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>布魯日與根特若只能選一個：偏童話選布魯日；偏悠閒生活感選根特。</li>
+      <li>若連續兩天一日遊太累，可將 DAY 8 改成布魯塞爾自由日。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 9 -->
+  <article class="day" id="d9">
+    <div class="day-head lux"><span class="dnum">DAY 9</span><h3>前往巴黎・塞納河畔初見</h3><span class="base">📍 布魯塞爾 → 巴黎</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:00</span><div class="what">退房、前往 Brussels Midi 車站</div><div class="mom">Eurostar 需提早到站過驗票閘門</div></li>
+      <li><span class="t">10:00 前後</span><div class="what">搭 Eurostar 前往巴黎北站（約 1.5 小時）</div><div class="mom">大行李放置區離座位較遠，貴重物隨身</div></li>
+      <li><span class="t">12:30</span><div class="what">抵達、入住或寄放行李</div><div class="mom">住宿選歌劇院／聖拉扎爾一帶，平坦好走</div></li>
+      <li><span class="t">15:00</span><div class="what"><a href="https://maps.google.com/?q=Cathedrale+Notre-Dame+de+Paris" target="_blank" rel="noopener">聖母院</a>、西堤島與塞納河畔慢走</div><div class="mom">以平坦河岸路線為主，天黑前看景</div></li>
+      <li><span class="t">17:00</span><div class="what"><a href="https://maps.google.com/?q=Jardin+des+Tuileries+Paris" target="_blank" rel="noopener">杜樂麗花園</a>聖誕市集與晚餐</div><div class="mom">market 人潮多，背包放身前</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>Eurostar 為指定班次票，錯過不易改；當天早上不要排其他行程。</li>
+      <li>抵達日不排博物館，留給隔日完整體力。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 10 -->
+  <article class="day" id="d10">
+    <div class="day-head lux"><span class="dnum">DAY 10</span><h3>巴黎經典慢遊・少走路版</h3><span class="base">📍 巴黎</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">09:45</span><div class="what"><a href="https://maps.google.com/?q=Musee+d%27Orsay+Paris" target="_blank" rel="noopener">奧塞美術館</a>或羅浮宮精選路線（二選一）</div><div class="mom">預約時段；奧塞規模較小、座椅多，較不累</div></li>
+      <li><span class="t">12:30</span><div class="what">午餐</div><div class="mom">安排完整 60–90 分鐘室內休息</div></li>
+      <li><span class="t">14:30</span><div class="what">塞納河遊船</div><div class="mom">坐著看巴黎，選有暖氣封閉船艙班次</div></li>
+      <li><span class="t">16:30</span><div class="what"><a href="https://maps.google.com/?q=Galeries+Lafayette+Haussmann+Paris" target="_blank" rel="noopener">老佛爺百貨</a>聖誕櫥窗與穹頂</div><div class="mom">室內看聖誕樹，有電梯與座位</div></li>
+      <li><span class="t">18:00</span><div class="what"><a href="https://maps.google.com/?q=Avenue+des+Champs-Elysees+Paris" target="_blank" rel="noopener">香榭麗舍</a>聖誕燈飾（視體力）</div><div class="mom">累了可只在百貨區用晚餐後回飯店</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>艾菲爾鐵塔以遠眺或車上欣賞為主，不安排登塔排隊。</li>
+      <li>下雨時改百貨公司＋咖啡館室內日。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 11 -->
+  <article class="day" id="d11">
+    <div class="day-head end"><span class="dnum">DAY 11</span><h3>回程緩衝日</h3><span class="base">📍 巴黎 → 機場區</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">上午</span><div class="what">市區採買伴手禮或自由散步</div><div class="mom">不排需大量步行的景點</div></li>
+      <li><span class="t">下午</span><div class="what">前往戴高樂機場區、入住機場飯店</div><div class="mom">若航班自阿姆斯特丹出發，改搭列車北返並住機場區</div></li>
+      <li><span class="t">傍晚</span><div class="what">簡單晚餐、整理行李與退稅單據</div><div class="mom">法國退稅可先在 App 或機台預辦</div></li>
+      <li><span class="t">晚上</span><div class="what">確認航廈、接送與起飛時間</div><div class="mom">至少保留一個交通緩衝日</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>長程旅行不建議最後一天才從市區直奔洲際班機。</li>
+      <li>機場飯店可大幅降低最後一天壓力。</li>
+    </ul></div>
+  </article>
+
+  <!-- DAY 12 -->
+  <article class="day" id="d12">
+    <div class="day-head end"><span class="dnum">DAY 12</span><h3>返台</h3><span class="base">📍 機場</span></div>
+    <div class="day-body"><ul class="tl">
+      <li><span class="t">起飛前 3–3.5 hr</span><div class="what">抵達機場</div><div class="mom">冬季可能遇到航班與鐵路延誤</div></li>
+      <li><span class="t">報到後</span><div class="what">安檢、退稅、候機</div><div class="mom">媽媽的藥品與保暖衣物放隨身行李</div></li>
+      <li><span class="t">登機</span><div class="what">返台 ✈️</div><div class="mom">機上定時起身與補水</div></li>
+    </ul></div>
+    <div class="day-note"><b>當日備註</b><ul>
+      <li>歐洲冬季衣物厚，回程行李體積通常增加，建議預留 20% 空間。</li>
+      <li>巧克力與餅乾集中放硬殼行李中央，避免壓碎。</li>
+    </ul></div>
+  </article>
+</section>
+<!-- ============ 住宿 ============ -->
+<section id="stay">
+  <div class="sec-head">
+    <div class="en">Where to Stay</div>
+    <h2>住宿選擇原則</h2>
+  </div>
+  <div class="grid grid-3">
+    <div class="card info-card">
+      <h3>🌷 阿姆斯特丹</h3>
+      <ul>
+        <li>優先：Amsterdam Centraal 周邊、Zuid、De Pijp 電車站附近。</li>
+        <li>條件：電梯、24 小時櫃台、距車站／電車站 5–8 分鐘內。</li>
+        <li>避開：只有陡峭樓梯的運河屋、小房間且無電梯的老旅館。</li>
+      </ul>
+    </div>
+    <div class="card info-card">
+      <h3>🍫 布魯塞爾</h3>
+      <ul>
+        <li>優先：Brussels Central、Grand-Place 外圍、De Brouckère。</li>
+        <li>可步行到市集，但不要住最吵的攤位正旁邊。</li>
+        <li>若用 Brussels Midi，白天轉車即可；晚間拖行李建議叫車。</li>
+      </ul>
+    </div>
+    <div class="card info-card">
+      <h3>🗼 巴黎</h3>
+      <ul>
+        <li>優先：歌劇院、聖拉扎爾、羅浮宮周邊 1–2 區與 9 區。</li>
+        <li>巴黎老建築常無電梯，訂房務必確認電梯可達客房樓層。</li>
+        <li>避開北站深夜周邊；晚間拖行李以計程車為優先。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card check-group" style="margin-top:16px">
+    <h3>✅ 訂房必勾選（勾選狀態會自動儲存）</h3>
+    <div class="progress"><i data-bar="booking"></i></div>
+    <ul class="ck" data-group="booking">
+      <li><label><input type="checkbox"><span>電梯可到客房樓層（必要）</span></label></li>
+      <li><label><input type="checkbox"><span>步行 8 分鐘內可到車站（必要）</span></label></li>
+      <li><label><input type="checkbox"><span>暖氣評價穩定（必要）</span></label></li>
+      <li><label><input type="checkbox"><span>雙床房或較大床型（必要）</span></label></li>
+      <li><label><input type="checkbox"><span>早餐在館內（加分）</span></label></li>
+      <li><label><input type="checkbox"><span>可寄放行李（加分）</span></label></li>
+      <li><label><input type="checkbox"><span>淋浴間有扶手（加分）</span></label></li>
+      <li><label><input type="checkbox"><span>房內熱水壺（加分）</span></label></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 預算 ============ -->
+<section id="budget">
+  <div class="sec-head">
+    <div class="en">Budget</div>
+    <h2>預算概算（2 人，不含購物）</h2>
+    <p>規劃用區間；實際價格受航班、住宿等級、週末與聖誕檔期影響</p>
+  </div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="tbl-wrap" style="border:none">
+      <table>
+        <thead><tr><th>項目</th><th>兩人估算</th><th>說明</th></tr></thead>
+        <tbody>
+          <tr><td>台灣往返歐洲機票</td><td><b>NT$60,000–90,000</b></td><td>經濟艙，視轉機與行李</td></tr>
+          <tr><td>住宿 11 晚</td><td><b>NT$75,000–118,000</b></td><td>雙人房、交通方便、含稅概估（巴黎略高）</td></tr>
+          <tr><td>跨國與城際交通</td><td><b>NT$18,000–28,000</b></td><td>提早訂較有機會壓低成本</td></tr>
+          <tr><td>餐飲</td><td><b>NT$30,000–45,000</b></td><td>每日一餐較完整餐廳＋簡餐</td></tr>
+          <tr><td>景點門票</td><td><b>NT$10,000–16,000</b></td><td>博物館、遊船等</td></tr>
+          <tr><td>保險／網路／雜支</td><td><b>NT$8,000–14,000</b></td><td>旅平險、eSIM、計程車彈性</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="total">兩人總預算建議：約 <b>NT$201,000–311,000</b>｜鎖定四星飯店、直飛或熱門週末需再提高</div>
+  <div class="card info-card" style="margin-top:16px">
+    <h3>💰 省錢不省體力的做法</h3>
+    <ul>
+      <li>Eurostar 與跨國列車越早訂越便宜，但市區行程不要全部綁死。</li>
+      <li>午餐吃完整餐廳，晚餐改超市熟食或飯店附近簡餐。</li>
+      <li>住宿以交通便利優先，不為了省房價住太遠。</li>
+      <li>只買真正會用的城市卡；媽媽同行不適合為回本而趕景點。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 健康安全清單 ============ -->
+<section id="health">
+  <div class="sec-head">
+    <div class="en">Health & Safety</div>
+    <h2>媽媽同行健康與安全清單</h2>
+    <p>可直接當出發前與旅途中的核對清單，勾選狀態自動儲存</p>
+  </div>
+  <div class="grid grid-2">
+    <div class="card check-group">
+      <h3>👜 隨身小包</h3>
+      <div class="progress"><i data-bar="bag"></i></div>
+      <ul class="ck" data-group="bag">
+        <li><label><input type="checkbox"><span>護照影本、保險資料、緊急聯絡人</span></label></li>
+        <li><label><input type="checkbox"><span>固定用藥與英文藥名／處方影本</span></label></li>
+        <li><label><input type="checkbox"><span>保溫瓶、口罩、護唇膏、暖暖包</span></label></li>
+        <li><label><input type="checkbox"><span>薄手套與摺疊購物袋</span></label></li>
+      </ul>
+    </div>
+    <div class="card check-group wine">
+      <h3>🚶 行走與休息</h3>
+      <div class="progress"><i data-bar="walk"></i></div>
+      <ul class="ck" data-group="walk">
+        <li><label><input type="checkbox"><span>每天早餐確認膝蓋、腰背、睡眠狀況</span></label></li>
+        <li><label><input type="checkbox"><span>連續步行不超過 90 分鐘</span></label></li>
+        <li><label><input type="checkbox"><span>石板路不邊走邊拍，先停下再拍照</span></label></li>
+        <li><label><input type="checkbox"><span>每天可刪除一個景點，不補行程</span></label></li>
+      </ul>
+    </div>
+    <div class="card check-group pine">
+      <h3>🔒 防扒與財物</h3>
+      <div class="progress"><i data-bar="safe"></i></div>
+      <ul class="ck" data-group="safe">
+        <li><label><input type="checkbox"><span>手機掛繩或拉鍊袋，避免放外套口袋</span></label></li>
+        <li><label><input type="checkbox"><span>護照與備用卡分開保管</span></label></li>
+        <li><label><input type="checkbox"><span>火車上下車時特別注意行李</span></label></li>
+        <li><label><input type="checkbox"><span>聖誕市集人潮中背包移至身前</span></label></li>
+      </ul>
+    </div>
+    <div class="card check-group night">
+      <h3>❄️ 冬季應變</h3>
+      <div class="progress"><i data-bar="winter"></i></div>
+      <ul class="ck" data-group="winter">
+        <li><label><input type="checkbox"><span>前一晚確認鐵路罷工、工程或天氣警報</span></label></li>
+        <li><label><input type="checkbox"><span>準備一個完整室內備案</span></label></li>
+        <li><label><input type="checkbox"><span>跨國移動日不排不可取消的預約活動</span></label></li>
+        <li><label><input type="checkbox"><span>最後一晚住回程機場城市</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 預訂時間軸 ============ -->
+<section id="booking">
+  <div class="sec-head">
+    <div class="en">Booking Timeline</div>
+    <h2>出發前預訂時間軸</h2>
+  </div>
+  <div class="card">
+    <ul class="book-tl">
+      <li><h3>出發前 6–9 個月</h3><p>確認旅行日期、機票與主要住宿；優先選可取消方案。</p></li>
+      <li><h3>出發前 3–5 個月</h3><p>預訂跨國列車、熱門博物館與運河船；確認媽媽護照效期與保險。</p></li>
+      <li><h3>出發前 1 個月</h3><p>確認 2026 各城市聖誕市集最終日期、冬季施工、罷工公告。</p></li>
+      <li><h3>出發前 7 天</h3><p>下載 NS、SNCB、SNCF Connect／Bonjour RATP、Google Maps 與離線地圖；檢查天氣。</p></li>
+      <li><h3>出發前 1 天</h3><p>確認班機、機場交通、跨國列車月台與住宿入住方式。</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 官方資訊 ============ -->
+<section id="official" style="padding-bottom:20px">
+  <div class="sec-head">
+    <div class="en">Official Resources</div>
+    <h2>建議使用的官方資訊</h2>
+  </div>
+  <div class="links">
+    <a href="https://www.nsinternational.com/en" target="_blank" rel="noopener"><b>🚄 荷蘭鐵路 NS International</b><span>荷蘭境內與阿姆斯特丹—布魯塞爾跨國列車</span></a>
+    <a href="https://www.belgiantrain.be/en" target="_blank" rel="noopener"><b>🚆 比利時國鐵 SNCB／NMBS</b><span>布魯塞爾、布魯日、根特等國內線</span></a>
+    <a href="https://www.eurostar.com/" target="_blank" rel="noopener"><b>🚄 Eurostar</b><span>布魯塞爾—巴黎跨國列車訂票</span></a>
+    <a href="https://www.sncf-connect.com/en-en/" target="_blank" rel="noopener"><b>🚆 法國國鐵 SNCF Connect</b><span>法國境內列車與時刻查詢</span></a>
+    <a href="https://www.brussels.be/winter-wonders" target="_blank" rel="noopener"><b>🎄 布魯塞爾 Winter Wonders</b><span>2026 活動日期：11/27 – 2027/1/3</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="en">Christmas in Europe</div>
+  <p>荷比法 12 天慢旅行｜媽媽同行版・第一版行程骨架</p>
+  <p style="opacity:.7">待實際旅行日期與航班確認後，再將 DAY 1、11、12 調整為正式版本</p>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="回到頁首">↑</button>
+
+<script>
+(function(){
+  /* ===== 飄雪與燈串（尊重減少動態偏好） ===== */
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduced){
+    var snow = document.getElementById('snow');
+    for(var i=0;i<26;i++){
+      var f=document.createElement('span');
+      f.className='flake'; f.textContent='❄';
+      f.style.left=(Math.random()*100)+'%';
+      f.style.fontSize=(7+Math.random()*9)+'px';
+      f.style.animationDuration=(9+Math.random()*10)+'s';
+      f.style.animationDelay=(-Math.random()*14)+'s';
+      f.style.opacity=(0.35+Math.random()*0.5);
+      snow.appendChild(f);
+    }
+  }
+  var lights=document.getElementById('lights');
+  for(var j=0;j<18;j++){
+    var d=document.createElement('i');
+    d.style.left=(3+Math.random()*94)+'%';
+    d.style.top=(8+Math.random()*70)+'%';
+    d.style.animationDelay=(Math.random()*3.4)+'s';
+    lights.appendChild(d);
+  }
+
+  /* ===== 每日導覽列 ===== */
+  var days=[
+    {id:'d1',n:1,t:'抵達',c:'ams'},{id:'d2',n:2,t:'阿姆初見',c:'ams'},
+    {id:'d3',n:3,t:'國家博物館',c:'ams'},{id:'d4',n:4,t:'風車村',c:'ams'},
+    {id:'d5',n:5,t:'→布魯塞爾',c:'bru'},{id:'d6',n:6,t:'城市慢遊',c:'bru'},
+    {id:'d7',n:7,t:'布魯日',c:'bru'},{id:'d8',n:8,t:'根特',c:'bru'},
+    {id:'d9',n:9,t:'→巴黎',c:'lux'},{id:'d10',n:10,t:'巴黎慢遊',c:'lux'},
+    {id:'d11',n:11,t:'回程緩衝',c:'end'},{id:'d12',n:12,t:'返台',c:'end'}
+  ];
+  var rail=document.getElementById('dayRail');
+  days.forEach(function(d){
+    var b=document.createElement('button');
+    b.className='chip c-'+d.c;
+    b.innerHTML='D'+d.n+'<small>'+d.t+'</small>';
+    b.addEventListener('click',function(){
+      document.getElementById(d.id).scrollIntoView({behavior:reduced?'auto':'smooth'});
+    });
+    rail.appendChild(b);
+  });
+  /* 捲動時高亮目前日期 */
+  if('IntersectionObserver' in window){
+    var chips=rail.children;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          var idx=days.findIndex(function(d){return d.id===e.target.id});
+          for(var k=0;k<chips.length;k++)chips[k].classList.toggle('active',k===idx);
+          var c=chips[idx]; if(c&&c.scrollIntoView)c.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+        }
+      });
+    },{rootMargin:'-35% 0px -55% 0px'});
+    days.forEach(function(d){io.observe(document.getElementById(d.id))});
+  }
+
+  /* ===== 勾選清單：儲存與進度 ===== */
+  var KEY='benelux-trip-checks';
+  function load(){
+    try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}
+  }
+  function save(state){
+    try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
+  }
+  var state=load();
+  document.querySelectorAll('.ck').forEach(function(list){
+    var g=list.getAttribute('data-group');
+    var boxes=list.querySelectorAll('input[type=checkbox]');
+    var bar=document.querySelector('[data-bar="'+g+'"]');
+    function refresh(){
+      var done=0;
+      boxes.forEach(function(b){if(b.checked)done++});
+      if(bar)bar.style.width=(boxes.length?Math.round(done/boxes.length*100):0)+'%';
+    }
+    boxes.forEach(function(b,i){
+      var k=g+'-'+i;
+      if(state[k])b.checked=true;
+      b.addEventListener('change',function(){
+        state[k]=b.checked; save(state); refresh();
+      });
+    });
+    refresh();
+  });
+
+  /* ===== 回頂端 ===== */
+  var top=document.getElementById('topBtn');
+  window.addEventListener('scroll',function(){
+    top.classList.toggle('show',window.scrollY>700);
+  },{passive:true});
+  top.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:reduced?'auto':'smooth'});
+  });
+})();
+</script>
+</body>
+</html>
