@@ -241,9 +241,10 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 .gcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s}
 .gcard:hover{transform:translateY(-3px)}
 .gcard .ph{position:relative;aspect-ratio:4/3;background:linear-gradient(150deg,#1E4438,#132836);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.gcard .ph img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .5s}
+.gcard .ph img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .5s}
 .gcard .ph img.on{opacity:1}
-.gcard .ph .fallback{position:absolute;inset:0;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;color:#E9E2CF;font-size:.85rem;letter-spacing:.08em}
+.gcard .ph.loaded .fallback{display:none}
+.gcard .ph .fallback{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;color:#E9E2CF;font-size:.85rem;letter-spacing:.08em}
 .gcard .ph .fallback span{font-size:2.2rem}
 .gcard .ph .daytag{position:absolute;left:10px;top:10px;z-index:2;font-size:.72rem;font-weight:700;color:#fff;border-radius:999px;padding:3px 11px;letter-spacing:.05em;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .gcard .ph .daytag.ams{background:var(--ams)}
@@ -826,6 +827,7 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
      txt:'修復後重新開放的哥德傑作，與莎士比亞書店、拉丁區串成留白日的悠閒路線。'}
   ];
   var gal=document.getElementById('gallery');
+  var refMap={};
   spots.forEach(function(s){
     var card=document.createElement('article');
     card.className='gcard';
@@ -836,18 +838,43 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
       '<div class="tx"><div class="en-name">'+s.en+'</div><h3>'+s.zh+'</h3><p>'+s.txt+'</p>'+
       '<div class="credit">照片：Wikipedia／Wikimedia Commons</div></div>';
     gal.appendChild(card);
-    var img=card.querySelector('img');
-    fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+s.wiki)
-      .then(function(r){return r.ok?r.json():Promise.reject()})
-      .then(function(j){
-        var src=j.thumbnail&&j.thumbnail.source;
-        if(!src)return;
-        src=src.replace(/\/(\d+)px-/, '/720px-');
-        img.onload=function(){img.classList.add('on')};
-        img.src=src;
-      })
-      .catch(function(){/* 保留色卡備援 */});
+    refMap[s.wiki.replace(/_/g,' ')]={img:card.querySelector('img'),ph:card.querySelector('.ph'),wiki:s.wiki};
   });
+  function setImg(ref,src){
+    if(!ref||!src||ref.img.getAttribute('src'))return;
+    ref.img.onload=function(){ref.img.classList.add('on');ref.ph.classList.add('loaded')};
+    ref.img.src=src;
+  }
+  /* 一次批次取得全部景點條目首圖 */
+  var titles=spots.map(function(s){return s.wiki}).join('|');
+  var api='https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*'+
+          '&prop=pageimages&piprop=thumbnail&pithumbsize=720&redirects=1&titles='+
+          encodeURIComponent(titles);
+  fetch(api)
+    .then(function(r){return r.ok?r.json():Promise.reject()})
+    .then(function(j){
+      var pages=(j.query&&j.query.pages)||{};
+      var norm={};
+      ((j.query&&j.query.normalized)||[]).forEach(function(n){norm[n.to]=n.from});
+      ((j.query&&j.query.redirects)||[]).forEach(function(n){norm[n.to]=norm[n.from]||n.from});
+      Object.keys(pages).forEach(function(pid){
+        var p=pages[pid];
+        var key=(norm[p.title]||p.title).replace(/_/g,' ');
+        var ref=refMap[key]||refMap[p.title];
+        if(p.thumbnail)setImg(ref,p.thumbnail.source);
+      });
+      /* 補漏：批次沒拿到的，逐張用 REST API 再試 */
+      Object.keys(refMap).forEach(function(k){
+        var ref=refMap[k];
+        if(!ref.img.getAttribute('src')){
+          fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+ref.wiki)
+            .then(function(r){return r.ok?r.json():Promise.reject()})
+            .then(function(x){if(x.thumbnail)setImg(ref,x.thumbnail.source.replace(/\/(\d+)px-/,'/720px-'))})
+            .catch(function(){});
+        }
+      });
+    })
+    .catch(function(){/* 離線或被封鎖時保留色卡備援 */});
 
   /* ===== 飄雪與燈串 ===== */
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
