@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>荷比法 12 天慢旅行｜媽媽同行版・Christmas in Europe</title>
+<title>荷比法 11 天 9 夜慢旅行｜媽媽同行版・Christmas in Europe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -201,26 +201,55 @@ footer{margin-top:60px;background:var(--night);color:#C9C3B2;text-align:center;p
 footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);font-size:.8rem;text-transform:uppercase}
 .top-btn{position:fixed;right:16px;bottom:18px;z-index:60;width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;background:var(--pine);color:#fff;font-size:1.1rem;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s}
 .top-btn.show{opacity:.92;pointer-events:auto}
+
+/* ===== V2：每日資訊徽章 ===== */
+.stats{display:flex;gap:8px;flex-wrap:wrap;padding:14px 22px 0}
+.stat{font-size:.8rem;background:#F4F0E5;border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--muted)}
+.stat b{color:var(--wine);font-weight:700}
+
+/* ===== V2：方案分頁 ===== */
+.opt-tabs{display:flex;gap:8px;flex-wrap:wrap;padding:14px 22px 0}
+.opt-tab{cursor:pointer;font-family:var(--zh);border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 16px;font-weight:700;font-size:.86rem;color:var(--muted);transition:.18s}
+.opt-tab .rec{font-size:.68rem;background:var(--wine);color:#fff;border-radius:6px;padding:1px 6px;margin-left:5px;vertical-align:1px}
+.opt-tabs.ams .opt-tab.active{background:var(--ams);border-color:var(--ams);color:#fff}
+.opt-tabs.lux .opt-tab.active{background:var(--lux);border-color:var(--lux);color:#fff}
+.opt-tab.active .rec{background:rgba(255,255,255,.25)}
+.opt-panel{display:none}
+.opt-panel.active{display:block}
+.opt-meta{margin:10px 22px 0;font-size:.85rem;color:var(--muted);background:#F2F0E8;border-radius:8px;padding:8px 12px}
+
+/* ===== V2：強度總覽 ===== */
+.intensity{list-style:none}
+.intensity li{display:grid;grid-template-columns:52px 1fr 118px;gap:12px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.86rem}
+.intensity li:last-child{border-bottom:none}
+.intensity .d{font-family:var(--en);font-weight:700;color:var(--muted);letter-spacing:.04em}
+.ibar{height:10px;border-radius:99px;background:#EDE7D8;position:relative;overflow:hidden}
+.ibar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--gold)}
+.ibar i.ams{background:linear-gradient(90deg,#B07F2C,#E3BC6E)}
+.ibar i.bru{background:linear-gradient(90deg,#732630,#A94A52)}
+.ibar i.lux{background:linear-gradient(90deg,#173427,#2E5C4B)}
+.ibar i.end{background:linear-gradient(90deg,#0E1F2B,#4E6E8C)}
+.intensity .meta{text-align:right;white-space:nowrap}
+.intensity .meta small{display:block;color:var(--muted);font-size:.74rem}
+.intensity .stars{color:var(--gold);letter-spacing:1px}
+@media (max-width:560px){.intensity li{grid-template-columns:44px 1fr 104px;gap:8px}}
 </style>
-</head>
-<body>
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="snowfield" id="snow"></div>
   <div class="lights" id="lights"></div>
   <div class="hero-inner">
-    <div class="eyebrow">Christmas in Benelux</div>
-    <h1>荷比法 12 天慢旅行</h1>
-    <div class="sub">媽媽同行版｜荷蘭・比利時・法國</div>
+    <div class="eyebrow">Christmas in Europe</div>
+    <h1>荷比法 11 天 9 夜慢旅行</h1>
+    <div class="sub">媽媽同行版 V2.0｜荷蘭・比利時・法國</div>
     <div class="season">建議季節｜12 月上旬至中旬</div>
     <div class="hero-badges">
-      <span>🏠 <b>4 晚</b> 阿姆斯特丹</span>
-      <span>🏠 <b>4 晚</b> 布魯塞爾</span>
-      <span>🏠 <b>2 晚</b> 巴黎</span>
-      <span>🚄 跨國只移動 <b>2 次</b></span>
+      <span>🏠 <b>3 晚</b> 阿姆斯特丹</span>
+      <span>🏠 <b>2 晚</b> 布魯塞爾</span>
+      <span>🏠 <b>4 晚</b> 巴黎</span>
+      <span>🧳 換飯店只有 <b>2 次</b></span>
     </div>
   </div>
-  <!-- 阿姆斯特丹山形屋頂剪影 -->
   <svg class="skyline" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
     <path fill="#F6F2EA" d="M0,150 L0,90 L40,90 L40,60 L60,40 L80,60 L80,95 L120,95 L120,55 L145,30 L170,55 L170,90 L210,90 L210,70 L230,50 L235,55 L240,50 L260,70 L260,100 L300,100 L300,50 L330,20 L360,50 L360,92 L400,92 L400,65 L420,45 L440,65 L440,98 L480,98 L480,58 L505,33 L530,58 L530,95 L575,95 L575,72 L595,52 L615,72 L615,100 L655,100 L655,48 L685,18 L715,48 L715,92 L755,92 L755,66 L775,46 L795,66 L795,98 L835,98 L835,55 L860,30 L885,55 L885,95 L925,95 L925,70 L945,50 L965,70 L965,100 L1005,100 L1005,52 L1035,22 L1065,52 L1065,93 L1105,93 L1105,62 L1125,42 L1145,62 L1145,90 L1200,90 L1200,150 Z"/>
     <g fill="#132836" opacity=".55">
@@ -238,14 +267,14 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <section id="concept">
   <div class="sec-head">
     <div class="en">Slow Travel Design</div>
-    <h2>旅行設計重點</h2>
-    <p>這份行程特別為母子／母女同行設計：暖色聖誕・少換飯店・少趕車・雨天有備案</p>
+    <h2>V2.0 旅行設計重點</h2>
+    <p>為 12 月冬季・媽媽同行・第一次歐洲而設計：舒適度優先，而不是景點數量</p>
   </div>
   <div class="grid grid-2">
-    <div class="card point"><div class="ico">👣</div><div><h3>每天 8,000–12,000 步</h3><p>每天只排 1–2 個重點，不追求打卡數量。</p></div></div>
-    <div class="card point"><div class="ico">☕</div><div><h3>走 60–90 分鐘就休息</h3><p>連續步行後安排座位或咖啡館，午休與咖啡時間都保留。</p></div></div>
-    <div class="card point"><div class="ico">🧳</div><div><h3>跨國只移動兩次</h3><p>避免天天拖行李；石板路城市以小包出發，大行李留在住宿據點。</p></div></div>
-    <div class="card point"><div class="ico">🌆</div><div><h3>配合 12 月天黑時間</h3><p>約 16:30 天黑，戶外景點集中在 09:30–15:30，晚上留給聖誕市集與休息。</p></div></div>
+    <div class="card point"><div class="ico">👣</div><div><h3>每天 6,500–10,000 步</h3><p>凡爾賽除外；一天一個核心區域，午間固定休息。</p></div></div>
+    <div class="card point"><div class="ico">🔀</div><div><h3>天氣與體力雙方案</h3><p>Day 2 依天氣選羊角村或市區；Day 8 依體力三選一。</p></div></div>
+    <div class="card point"><div class="ico">🧳</div><div><h3>全程只換 2 次飯店</h3><p>3＋2＋4 晚配置；阿姆斯特丹進、巴黎出，不走回頭路。</p></div></div>
+    <div class="card point"><div class="ico">✨</div><div><h3>冬季限定亮點</h3><p>Amsterdam Light Festival 暖艙遊船、Winter Wonders 聖誕市集、鐵塔燈光秀。</p></div></div>
   </div>
 </section>
 
@@ -259,23 +288,23 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
     <div class="leg ams">
       <div class="en">Amsterdam</div>
       <h3>阿姆斯特丹</h3>
-      <div class="nights">第 1–4 晚</div>
-      <ul><li>運河遊船・老城散步</li><li>國家博物館</li><li>贊丹／風車村半日</li></ul>
+      <div class="nights">Day 1–3・第 1–3 晚</div>
+      <ul><li>羊角村或市區冬季版</li><li>Light Festival 遊船</li><li>桑斯安斯風車村</li></ul>
     </div>
     <div class="leg bru">
       <div class="en">Brussels</div>
       <h3>布魯塞爾</h3>
-      <div class="nights">第 5–8 晚</div>
-      <ul><li>大廣場・Winter Wonders</li><li>布魯日一日遊</li><li>根特一日遊</li></ul>
+      <div class="nights">Day 4–5・第 4–5 晚</div>
+      <ul><li>布魯日輕裝一日</li><li>大廣場・巧克力</li><li>Winter Wonders 市集</li></ul>
     </div>
     <div class="leg lux">
       <div class="en">Paris</div>
       <h3>巴黎</h3>
-      <div class="nights">第 9–10 晚</div>
-      <ul><li>塞納河遊船・聖誕燈飾</li><li>奧塞或羅浮宮擇一</li><li>老佛爺聖誕櫥窗</li></ul>
+      <div class="nights">Day 6–9・第 6–9 晚</div>
+      <ul><li>塞納河遊船・鐵塔燈光秀</li><li>羅浮宮・歌劇院</li><li>左岸留白日</li></ul>
     </div>
   </div>
-  <p class="route-tail">第 11 天移往戴高樂機場區（或依航班改回阿姆斯特丹）→ 第 12 天返台 ✈️</p>
+  <p class="route-tail">Day 10 巴黎 CDG 搭機 → Day 11 抵達台灣返家休息 ✈️</p>
 </section>
 
 <!-- ============ 交通與天氣 ============ -->
@@ -288,20 +317,19 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
     <div class="card info-card">
       <h3>🚄 交通核心</h3>
       <ul>
-        <li>荷蘭境內大眾運輸：感應式信用卡或手機即可進出站。</li>
-        <li>阿姆斯特丹 → 布魯塞爾：直達跨國列車最快約 2 小時 8 分。</li>
-        <li>比利時城市間以 SNCB 國鐵為主；布魯塞爾 → 布魯日平均約 1 小時 4 分。</li>
-        <li>布魯塞爾 → 巴黎：Eurostar 直達最快約 1 小時 22 分，務必提早訂票。</li>
-        <li>巴黎地鐵樓梯多、電梯少；市區短程建議多用公車或計程車，較適合媽媽。</li>
+        <li>荷蘭境內：OVpay 感應信用卡／手機進出站，同一人全程用同一張卡或裝置。</li>
+        <li>阿姆斯特丹 → 布魯塞爾直達列車約 2 小時；大行李寄放布魯塞爾，輕裝往返布魯日。</li>
+        <li>布魯塞爾 Midi → 巴黎北站：Eurostar 約 1 小時 22 分，聖誕旺季提前 40 分鐘到站。</li>
+        <li>巴黎地鐵樓梯多、電梯少；市區短程多用公車或 G7 計程車，CDG 進出市區有固定費率。</li>
       </ul>
-      <div class="tip">💡 跨國列車建議提早訂票並選位；市區短程保留彈性，前一晚再依天氣決定。</div>
+      <div class="tip">💡 跨國段屬浮動票價，日期確定後優先購買；兩人同行選可改期票種較安心。</div>
     </div>
     <div class="card info-card">
       <h3>🧣 12 月天氣與裝備</h3>
       <ul>
         <li>白天約 3–8°C，夜間接近 0°C；濕冷與風會讓體感更低。</li>
-        <li>防風防潑水羽絨外套＋發熱衣＋羊毛或刷毛中層。</li>
-        <li>防水止滑鞋比厚重雪靴實用，老城石板路尤其需要抓地力。</li>
+        <li>防風防潑水羽絨外套＋發熱衣＋羊毛或刷毛中層；外套穿在身上不占行李。</li>
+        <li>防水止滑鞋比厚重雪靴實用，石板路與風車村木橋尤其需要抓地力。</li>
         <li>圍巾、手套、毛帽、暖暖包與小型保溫瓶。</li>
       </ul>
       <div class="tip">⚠️ 不建議只帶雨傘：強風時以連帽防水外套更可靠。</div>
@@ -320,196 +348,243 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
   <div class="sec-head">
     <div class="en">Day by Day</div>
     <h2>每日行程</h2>
-    <p>點上方日期快速跳轉｜👵 為媽媽同行提醒</p>
+    <p>點上方日期快速跳轉｜👣 為預估步數｜👵 為媽媽同行提醒</p>
   </div>
   <!-- DAY 1 -->
   <article class="day" id="d1">
-    <div class="day-head ams"><span class="dnum">DAY 1</span><h3>抵達阿姆斯特丹・只安排入住</h3><span class="base">📍 阿姆斯特丹</span></div>
+    <div class="day-head ams"><span class="dnum">DAY 1</span><h3>台灣 ✈ 阿姆斯特丹・抵達調時差</h3><span class="base">🏨 阿姆斯特丹 第 1 晚</span></div>
+    <div class="stats"><span class="stat">👣 <b>3,000–5,000</b> 步</span><span class="stat">難度 ⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">抵達後</span><div class="what">機場搭火車或預約接送前往飯店</div><div class="mom">第一天不排景點，先補水、吃熱食、調整時差</div></li>
-      <li><span class="t">傍晚</span><div class="what">飯店附近超市與簡單晚餐</div><div class="mom">走路控制在 20–30 分鐘內</div></li>
-      <li><span class="t">晚上</span><div class="what">整理隔日用品、提早休息</div><div class="mom">洗澡後補充乳液，冬季室內暖氣較乾</div></li>
+      <li><span class="t">抵達後</span><div class="what">辦理入境、前往飯店</div><div class="mom">行李多或班機晚到時，預約接送比轉乘輕鬆</div></li>
+      <li><span class="t">入住後</span><div class="what">超市採買：飲水、早餐、水果</div><div class="mom">先補水、吃熱食，避免立即長距離步行</div></li>
+      <li><span class="t">傍晚</span><div class="what">飯店附近散步 30–60 分鐘</div><div class="mom">幫助調整時差，走累就回房</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>住宿優先：Amsterdam Centraal、Zuid 或可搭電車直達市中心的區域。</li>
-      <li>若班機晚到，建議直接住 Schiphol 機場附近一晚，隔日再進城。</li>
+      <li>抵達日不排正式景點，讓媽媽恢復體力。</li>
+      <li>飛行途中每 2–3 小時起身活動、補水，避免酒精過量。</li>
     </ul></div>
   </article>
 
   <!-- DAY 2 -->
   <article class="day" id="d2">
-    <div class="day-head ams"><span class="dnum">DAY 2</span><h3>阿姆斯特丹經典初見</h3><span class="base">📍 阿姆斯特丹</span></div>
-    <div class="day-body"><ul class="tl">
-      <li><span class="t">09:30</span><div class="what"><a href="https://maps.google.com/?q=Dam+Square+Amsterdam" target="_blank" rel="noopener">水壩廣場</a>、王宮外觀、老城散步</div><div class="mom">上午精神最好，先安排戶外拍照</div></li>
-      <li><span class="t">11:30</span><div class="what">運河區午餐</div><div class="mom">選有室內座位與廁所的餐廳</div></li>
-      <li><span class="t">13:30</span><div class="what">阿姆斯特丹運河遊船</div><div class="mom">坐著看城市，最適合第一個完整日</div></li>
-      <li><span class="t">15:30</span><div class="what"><a href="https://maps.google.com/?q=De+9+Straatjes+Amsterdam" target="_blank" rel="noopener">九街區</a>咖啡或逛店</div><div class="mom">視體力縮短；天黑後返回飯店休息</div></li>
-      <li><span class="t">18:00</span><div class="what">晚餐</div><div class="mom">避免太晚用餐，保留恢復時間</div></li>
-    </ul></div>
+    <div class="day-head ams"><span class="dnum">DAY 2</span><h3>A／B 雙方案・依天氣決定</h3><span class="base">🏨 阿姆斯特丹 第 2 晚</span></div>
+    <div class="opt-tabs ams" data-day="d2">
+      <button class="opt-tab" data-panel="d2a">☀️ A 案｜羊角村（晴天）</button>
+      <button class="opt-tab active" data-panel="d2b">🌧️ B 案｜市區冬季版<span class="rec">推薦</span></button>
+    </div>
+    <div class="opt-panel" id="d2a">
+      <div class="stats"><span class="stat">👣 約 <b>8,000</b> 步</span><span class="stat">難度 ⭐⭐</span></div>
+      <div class="day-body"><ul class="tl">
+        <li><span class="t">08:00</span><div class="what">早餐</div></li>
+        <li><span class="t">09:00</span><div class="what">一日團／包車出發前往<a href="https://maps.google.com/?q=Giethoorn" target="_blank" rel="noopener">羊角村</a></div><div class="mom">大眾運輸單程 2 小時以上，包車或小團省體力</div></li>
+        <li><span class="t">上午</span><div class="what">🚤 羊角村遊船</div><div class="mom">冬季先確認遊船有開、有遮棚與保暖設備</div></li>
+        <li><span class="t">中午</span><div class="what">鄉村午餐</div></li>
+        <li><span class="t">下午</span><div class="what">村莊散步、蘆葦屋頂與小橋拍照</div><div class="mom">木橋濕滑慢走，先停下再拍照</div></li>
+        <li><span class="t">16:30</span><div class="what">返回阿姆斯特丹、晚餐</div></li>
+      </ul></div>
+      <div class="opt-meta">⚠️ 出發前 1–2 天確認天氣與遊船營運；天候不佳或遊船停駛，直接改走 B 案。</div>
+    </div>
+    <div class="opt-panel active" id="d2b">
+      <div class="stats"><span class="stat">👣 約 <b>7,000</b> 步</span><span class="stat">難度 ⭐⭐</span></div>
+      <div class="day-body"><ul class="tl">
+        <li><span class="t">上午</span><div class="what"><a href="https://maps.google.com/?q=Jordaan+Amsterdam" target="_blank" rel="noopener">約旦區 Jordaan</a>、九條街 Nine Streets</div><div class="mom">咖啡館密集，走 60 分鐘就找位子坐</div></li>
+        <li><span class="t">中午</span><div class="what">午餐</div></li>
+        <li><span class="t">下午</span><div class="what">運河散步、<a href="https://maps.google.com/?q=Bloemenmarkt+Amsterdam" target="_blank" rel="noopener">Bloemenmarkt 花市</a></div><div class="mom">花市有遮棚，鬱金香球根注意檢疫規定</div></li>
+        <li><span class="t">晚上</span><div class="what">✨ Amsterdam Light Festival 遊船</div><div class="mom">選暖艙班次，坐著看運河燈光藝術，冬季限定</div></li>
+        <li><span class="t">船後</span><div class="what">☕ 熱可可收尾</div></li>
+      </ul></div>
+      <div class="opt-meta">💡 燈節遊船是 12 月才有的行程，熱門班次建議提早預訂。</div>
+    </div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>運河船優先選有暖氣、封閉式船艙、廁所資訊清楚的班次。</li>
-      <li>不要同一天再塞紅燈區與大型博物館。</li>
+      <li>兩案擇一即可，不要貪心合併。</li>
     </ul></div>
   </article>
 
   <!-- DAY 3 -->
   <article class="day" id="d3">
-    <div class="day-head ams"><span class="dnum">DAY 3</span><h3>國家博物館＋博物館廣場</h3><span class="base">📍 阿姆斯特丹</span></div>
+    <div class="day-head ams"><span class="dnum">DAY 3</span><h3>桑斯安斯＋阿姆斯特丹</h3><span class="base">🏨 阿姆斯特丹 第 3 晚</span></div>
+    <div class="stats"><span class="stat">👣 <b>9,000–10,000</b> 步</span><span class="stat">難度 ⭐⭐⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:45</span><div class="what"><a href="https://maps.google.com/?q=Rijksmuseum+Amsterdam" target="_blank" rel="noopener">國家博物館 Rijksmuseum</a></div><div class="mom">預約時段，館內有座椅與咖啡館</div></li>
-      <li><span class="t">12:30</span><div class="what">博物館區午餐</div><div class="mom">安排完整 60–90 分鐘休息</div></li>
-      <li><span class="t">14:00</span><div class="what">梵谷博物館或 Moco（二選一）</div><div class="mom">媽媽若不愛看展，可改高級百貨或下午茶</div></li>
-      <li><span class="t">16:00</span><div class="what"><a href="https://maps.google.com/?q=Museumplein+Amsterdam" target="_blank" rel="noopener">Museumplein</a> 冬季活動／聖誕市集</div><div class="mom">2026 日期仍以出發前公告為準</div></li>
-      <li><span class="t">18:00</span><div class="what">回飯店或附近晚餐</div><div class="mom">保持彈性</div></li>
+      <li><span class="t">上午</span><div class="what">🚆 前往<a href="https://maps.google.com/?q=Zaanse+Schans" target="_blank" rel="noopener">桑斯安斯</a>：風車、木鞋工坊、起司店</div><div class="mom">空曠風大，帽子要能固定；不求每座風車都入內</div></li>
+      <li><span class="t">中午</span><div class="what">荷式鬆餅午餐</div><div class="mom">室內暖身，避開午後低溫</div></li>
+      <li><span class="t">13:00</span><div class="what">返回阿姆斯特丹</div></li>
+      <li><span class="t">下午</span><div class="what"><a href="https://maps.google.com/?q=Dam+Square+Amsterdam" target="_blank" rel="noopener">水壩廣場</a>、皇宮外觀、運河遊船</div><div class="mom">遊船是坐著休息的景點，安排在走完風車村之後剛好</div></li>
+      <li><span class="t">晚上</span><div class="what">自由活動</div><div class="mom">依體力逛燈飾或直接回飯店</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>大型博物館一天最多兩間。</li>
-      <li>若膝蓋容易累，可只選國家博物館，下午改運河旁咖啡館。</li>
+      <li>火車至 Zaandijk Zaanse Schans 後步行；下雨或風大可改計程車到入口。</li>
+      <li>大風雨時取消風車村，改國家博物館／梵谷博物館＋運河遊船。</li>
     </ul></div>
   </article>
 
   <!-- DAY 4 -->
   <article class="day" id="d4">
-    <div class="day-head ams"><span class="dnum">DAY 4</span><h3>贊丹・桑斯安斯風車村半日</h3><span class="base">📍 阿姆斯特丹往返</span></div>
+    <div class="day-head bru"><span class="dnum">DAY 4</span><h3>阿姆斯特丹 → 布魯塞爾 → 布魯日</h3><span class="base">🏨 布魯塞爾 第 4 晚</span></div>
+    <div class="stats"><span class="stat">👣 約 <b>8,500</b> 步</span><span class="stat">難度 ⭐⭐⭐</span><span class="stat">已取消鹿特丹 ✂️</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:30</span><div class="what">搭車前往 Zaandam／<a href="https://maps.google.com/?q=Zaanse+Schans" target="_blank" rel="noopener">Zaanse Schans</a></div><div class="mom">避開太早出門與通勤尖峰</div></li>
-      <li><span class="t">10:30</span><div class="what">風車村、木鞋工坊、起司店</div><div class="mom">戶外風大，停留約 2.5–3 小時即可</div></li>
-      <li><span class="t">13:30</span><div class="what">贊丹午餐</div><div class="mom">室內休息並避開午後低溫</div></li>
-      <li><span class="t">15:30</span><div class="what">返回阿姆斯特丹</div><div class="mom">晚上不再排遠距離活動</div></li>
-      <li><span class="t">17:30</span><div class="what">自由晚餐</div><div class="mom">可買熟食回飯店</div></li>
+      <li><span class="t">08:00</span><div class="what">早餐、退房</div><div class="mom">火車到站前 10 分鐘整理，不要最後一刻取行李</div></li>
+      <li><span class="t">上午</span><div class="what">直達火車前往布魯塞爾（約 2 小時）</div></li>
+      <li><span class="t">抵達後</span><div class="what">飯店寄放大行李</div><div class="mom">輕裝往返布魯日，不拖行李走石板路</div></li>
+      <li><span class="t">中午前後</span><div class="what">火車往<a href="https://maps.google.com/?q=Bruges" target="_blank" rel="noopener">布魯日</a>、午餐</div></li>
+      <li><span class="t">下午</span><div class="what"><a href="https://maps.google.com/?q=Minnewater+Bruges" target="_blank" rel="noopener">愛之湖</a>、馬克特廣場、鐘樓外觀、聖血禮拜堂</div><div class="mom">鐘樓不登塔；石板路走累立即找咖啡館</div></li>
+      <li><span class="t">傍晚</span><div class="what">咖啡館休息後返回布魯塞爾</div><div class="mom">晚餐從簡，附近用餐即可</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>風車村地面可能濕滑，務必穿防水止滑鞋。</li>
-      <li>天候惡劣時改成阿姆斯特丹室內日：海事博物館＋中央圖書館。</li>
+      <li>全程最複雜的一天；天候差或延誤時，布魯日縮短為廣場周邊 2 小時。</li>
+      <li>布魯日與布魯塞爾間班次密集，回程時間保持彈性。</li>
     </ul></div>
   </article>
 
   <!-- DAY 5 -->
   <article class="day" id="d5">
-    <div class="day-head bru"><span class="dnum">DAY 5</span><h3>跨國移動至布魯塞爾</h3><span class="base">📍 阿姆斯特丹 → 布魯塞爾</span></div>
+    <div class="day-head bru"><span class="dnum">DAY 5</span><h3>布魯塞爾慢遊</h3><span class="base">🏨 布魯塞爾 第 5 晚</span></div>
+    <div class="stats"><span class="stat">👣 約 <b>7,500</b> 步</span><span class="stat">難度 ⭐⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:30</span><div class="what">退房後前往車站</div><div class="mom">預留電梯與找月台時間</div></li>
-      <li><span class="t">11:00 前後</span><div class="what">搭直達跨國列車（約 2 小時 8 分）</div><div class="mom">大行李放置區可能離座位較遠，貴重物隨身</div></li>
-      <li><span class="t">13:30</span><div class="what">抵達、入住或寄放行李</div><div class="mom">住宿選 Brussels Central／De Brouckère 一帶較方便</div></li>
-      <li><span class="t">15:30</span><div class="what"><a href="https://maps.google.com/?q=Grand+Place+Brussels" target="_blank" rel="noopener">大廣場</a>、尿尿小童、皇家拱廊</div><div class="mom">以平坦路線慢走</div></li>
-      <li><span class="t">18:00</span><div class="what">Winter Wonders 聖誕市集</div><div class="mom">2026 官方日期：11/27–2027/1/3</div></li>
+      <li><span class="t">上午</span><div class="what"><a href="https://maps.google.com/?q=Grand+Place+Brussels" target="_blank" rel="noopener">黃金大廣場</a>、尿尿小童、巧克力店巡禮</div><div class="mom">市中心石板路多，慢走為主</div></li>
+      <li><span class="t">中午</span><div class="what">比利時淡菜或燉肉午餐</div><div class="mom">一定安排坐下的完整午餐與休息</div></li>
+      <li><span class="t">下午</span><div class="what">咖啡館休息</div><div class="mom">回飯店午休也完全可以</div></li>
+      <li><span class="t">晚上</span><div class="what">🎄 <a href="https://maps.google.com/?q=Winter+Wonders+Brussels" target="_blank" rel="noopener">Winter Wonders 聖誕市集</a></div><div class="mom">人潮中背包放身前；視體力加大廣場夜景</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>跨國移動日只排布魯塞爾市中心散步。</li>
-      <li>避免住 Brussels Midi 車站周邊偏僻街區，晚間移動以計程車為優先。</li>
+      <li>舊城核心以步行為主；較遠路段搭地鐵或計程車，不為省一站多走 20 分鐘。</li>
+      <li>雨天備案：巧克力博物館、百貨或室內咖啡館。</li>
     </ul></div>
   </article>
 
   <!-- DAY 6 -->
   <article class="day" id="d6">
-    <div class="day-head bru"><span class="dnum">DAY 6</span><h3>布魯塞爾城市慢遊</h3><span class="base">📍 布魯塞爾</span></div>
+    <div class="day-head lux"><span class="dnum">DAY 6</span><h3>Eurostar → 巴黎・鐵塔初見</h3><span class="base">🏨 巴黎 第 6 晚</span></div>
+    <div class="stats"><span class="stat">👣 約 <b>8,000</b> 步</span><span class="stat">難度 ⭐⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:45</span><div class="what"><a href="https://maps.google.com/?q=Mont+des+Arts+Brussels" target="_blank" rel="noopener">皇家廣場、藝術山</a></div><div class="mom">階梯多，可搭公車／計程車到高處後往下走</div></li>
-      <li><span class="t">11:30</span><div class="what">樂器博物館或馬格利特博物館（二選一）</div><div class="mom">保留體力</div></li>
-      <li><span class="t">13:30</span><div class="what">午餐＋比利時鬆餅</div><div class="mom">安排室內長休息</div></li>
-      <li><span class="t">15:30</span><div class="what"><a href="https://maps.google.com/?q=Cathedral+of+St.+Michael+and+St.+Gudula+Brussels" target="_blank" rel="noopener">聖米歇爾古都勒主教座堂</a></div><div class="mom">免費或低負擔景點</div></li>
-      <li><span class="t">17:00</span><div class="what">聖誕市集自由逛</div><div class="mom">累了可直接回飯店</div></li>
+      <li><span class="t">08:30</span><div class="what">早餐、退房</div></li>
+      <li><span class="t">上午</span><div class="what">🚄 Eurostar 前往巴黎北站（約 1.5 小時）</div><div class="mom">聖誕旺季提前 40 分鐘到站過安檢與驗票</div></li>
+      <li><span class="t">抵達後</span><div class="what">計程車到飯店寄放行李、午餐</div><div class="mom">北站人流大，護照手機收好；不拖行李轉地鐵</div></li>
+      <li><span class="t">下午</span><div class="what">塞納河遊船</div><div class="mom">選暖氣封閉船艙班次，坐著看巴黎第一眼</div></li>
+      <li><span class="t">傍晚</span><div class="what"><a href="https://maps.google.com/?q=Trocadero+Paris" target="_blank" rel="noopener">夏佑宮／戰神廣場</a>看艾菲爾鐵塔</div><div class="mom">12 月約 17:00 天黑，不用等太晚就有夜景</div></li>
+      <li><span class="t">晚上</span><div class="what">✨ 鐵塔整點燈光秀後回飯店</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>布魯塞爾高低差比想像中明顯；路線採「上坡搭車、下坡步行」。</li>
-      <li>市集人多時將側背包放胸前。</li>
+      <li>高鐵延誤時取消鐵塔周邊散步，只保留遊船或附近晚餐。</li>
     </ul></div>
   </article>
 
   <!-- DAY 7 -->
   <article class="day" id="d7">
-    <div class="day-head bru"><span class="dnum">DAY 7</span><h3>布魯日童話古城一日</h3><span class="base">📍 布魯塞爾往返</span></div>
+    <div class="day-head lux"><span class="dnum">DAY 7</span><h3>巴黎經典・羅浮宮＋歌劇院區</h3><span class="base">🏨 巴黎 第 7 晚</span></div>
+    <div class="stats"><span class="stat">👣 約 <b>9,000</b> 步</span><span class="stat">難度 ⭐⭐⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:15</span><div class="what">搭直達火車前往布魯日</div><div class="mom">車程約 1 小時；抵達後可搭公車進古城</div></li>
-      <li><span class="t">10:45</span><div class="what"><a href="https://maps.google.com/?q=Minnewater+Bruges" target="_blank" rel="noopener">愛之湖</a>、貝居安會院外圍</div><div class="mom">先走較安靜區域</div></li>
-      <li><span class="t">12:00</span><div class="what"><a href="https://maps.google.com/?q=Markt+Bruges" target="_blank" rel="noopener">市集廣場</a>午餐</div><div class="mom">選可訂位餐廳，避免寒風中排隊</div></li>
-      <li><span class="t">14:00</span><div class="what">鐘樓廣場、運河散步／遊船視季節</div><div class="mom">不安排登鐘樓</div></li>
-      <li><span class="t">15:30</span><div class="what">巧克力店與咖啡時間</div><div class="mom">石板路走累時立即休息</div></li>
-      <li><span class="t">17:00</span><div class="what">返回布魯塞爾</div><div class="mom">晚餐從簡</div></li>
+      <li><span class="t">上午</span><div class="what">🖼 <a href="https://maps.google.com/?q=Louvre+Museum+Paris" target="_blank" rel="noopener">羅浮宮</a>（預約時段票）</div><div class="mom">以鎮館作品＋一至兩個展區為主，三小時足夠；善用電梯</div></li>
+      <li><span class="t">中午</span><div class="what"><a href="https://maps.google.com/?q=Jardin+des+Tuileries+Paris" target="_blank" rel="noopener">杜樂麗花園</a>短散步、午餐</div><div class="mom">12 月杜樂麗有聖誕市集可順逛</div></li>
+      <li><span class="t">下午</span><div class="what"><a href="https://maps.google.com/?q=Palais+Garnier+Paris" target="_blank" rel="noopener">巴黎歌劇院</a>外觀、拉法葉百貨</div><div class="mom">百貨室內有電梯座位；聖誕櫥窗與穹頂大樹必看</div></li>
+      <li><span class="t">晚上</span><div class="what">歌劇院周邊散步、晚餐</div><div class="mom">累了直接在百貨樓上用餐最省力</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>不拖行李進布魯日，當日往返更輕鬆。</li>
-      <li>媽媽若膝蓋不適，從車站直接搭公車到 Markt。</li>
+      <li>⚠️ 羅浮宮週二休館、奧賽與凡爾賽週一休館——日期確定後先核對星期，必要時與 Day 8 對調。</li>
+      <li>體力不足時取消杜樂麗散步，直接回飯店午休。</li>
     </ul></div>
   </article>
 
   <!-- DAY 8 -->
   <article class="day" id="d8">
-    <div class="day-head bru"><span class="dnum">DAY 8</span><h3>根特一日・比布魯日更生活化</h3><span class="base">📍 布魯塞爾往返</span></div>
-    <div class="day-body"><ul class="tl">
-      <li><span class="t">09:30</span><div class="what">火車前往 Gent-Sint-Pieters</div><div class="mom">抵達後搭電車進舊城</div></li>
-      <li><span class="t">10:45</span><div class="what"><a href="https://maps.google.com/?q=St+Michael's+Bridge+Ghent" target="_blank" rel="noopener">聖米歇爾橋</a>、香草河岸</div><div class="mom">拍照重點集中、距離不長</div></li>
-      <li><span class="t">12:15</span><div class="what">老城午餐</div><div class="mom">可品嘗燉牛肉、薯條</div></li>
-      <li><span class="t">14:00</span><div class="what"><a href="https://maps.google.com/?q=Gravensteen+Ghent" target="_blank" rel="noopener">格拉文斯丁城堡</a>外觀／市中心教堂</div><div class="mom">城堡階梯多，原則上不入內</div></li>
-      <li><span class="t">15:30</span><div class="what">咖啡館休息</div><div class="mom">天氣佳再加短程散步</div></li>
-      <li><span class="t">17:00</span><div class="what">返回布魯塞爾</div><div class="mom">整理隔日移動行李</div></li>
-    </ul></div>
+    <div class="day-head lux"><span class="dnum">DAY 8</span><h3>巴黎慢旅行・依體力三選一</h3><span class="base">🏨 巴黎 第 8 晚</span></div>
+    <div class="opt-tabs lux" data-day="d8">
+      <button class="opt-tab active" data-panel="d8a">⭐ A 案<span class="rec">推薦</span></button>
+      <button class="opt-tab" data-panel="d8b">B 案｜凡爾賽</button>
+      <button class="opt-tab" data-panel="d8c">C 案｜奧賽</button>
+    </div>
+    <div class="opt-panel active" id="d8a">
+      <div class="stats"><span class="stat">👣 約 <b>7,000</b> 步</span><span class="stat">難度 ⭐⭐</span></div>
+      <div class="day-body"><ul class="tl">
+        <li><span class="t">上午</span><div class="what"><a href="https://maps.google.com/?q=Palais+Garnier+Paris" target="_blank" rel="noopener">巴黎歌劇院 Garnier 內部參觀</a></div><div class="mom">金碧輝煌不輸凡爾賽，步行量卻少得多</div></li>
+        <li><span class="t">中午</span><div class="what">拉法葉百貨、午餐</div></li>
+        <li><span class="t">下午</span><div class="what">咖啡館休息 → 左岸散步</div><div class="mom">16:00 前保留回飯店休息的彈性</div></li>
+      </ul></div>
+      <div class="opt-meta">💡 最適合長輩的版本：室內為主、距離短、遇雨完全不受影響。</div>
+    </div>
+    <div class="opt-panel" id="d8b">
+      <div class="stats"><span class="stat">👣 約 <b>15,000</b> 步</span><span class="stat">難度 ⭐⭐⭐⭐</span></div>
+      <div class="day-body"><ul class="tl">
+        <li><span class="t">全日</span><div class="what"><a href="https://maps.google.com/?q=Palace+of+Versailles" target="_blank" rel="noopener">凡爾賽宮</a>半日＋午餐</div><div class="mom">體力佳才選；宮內距離長、人潮多</div></li>
+      </ul></div>
+      <div class="opt-meta">⚠️ 12 月花園枯水、噴泉秀停演，CP 值較低；不要因為「都來了」而硬去。週一休館。</div>
+    </div>
+    <div class="opt-panel" id="d8c">
+      <div class="stats"><span class="stat">👣 約 <b>8,000</b> 步</span><span class="stat">難度 ⭐⭐</span></div>
+      <div class="day-body"><ul class="tl">
+        <li><span class="t">上午</span><div class="what"><a href="https://maps.google.com/?q=Musee+d%27Orsay+Paris" target="_blank" rel="noopener">奧賽美術館</a></div><div class="mom">規模比羅浮宮小、座椅多，看展較不累</div></li>
+        <li><span class="t">下午</span><div class="what">左岸散步 → 聖日耳曼</div><div class="mom">咖啡館密集，隨時可休息</div></li>
+      </ul></div>
+      <div class="opt-meta">💡 雨天首選；週一休館，注意與羅浮宮（週二休）錯開。</div>
+    </div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>布魯日與根特若只能選一個：偏童話選布魯日；偏悠閒生活感選根特。</li>
-      <li>若連續兩天一日遊太累，可將 DAY 8 改成布魯塞爾自由日。</li>
+      <li>無論選哪一案，16:00 前回飯店休息；晚上自由用餐或預約一間正式法餐。</li>
     </ul></div>
   </article>
 
   <!-- DAY 9 -->
   <article class="day" id="d9">
-    <div class="day-head lux"><span class="dnum">DAY 9</span><h3>前往巴黎・塞納河畔初見</h3><span class="base">📍 布魯塞爾 → 巴黎</span></div>
+    <div class="day-head lux"><span class="dnum">DAY 9</span><h3>巴黎留白日・左岸慢旅行</h3><span class="base">🏨 巴黎 第 9 晚</span></div>
+    <div class="stats"><span class="stat">👣 約 <b>6,500</b> 步</span><span class="stat">難度 ⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:00</span><div class="what">退房、前往 Brussels Midi 車站</div><div class="mom">Eurostar 需提早到站過驗票閘門</div></li>
-      <li><span class="t">10:00 前後</span><div class="what">搭 Eurostar 前往巴黎北站（約 1.5 小時）</div><div class="mom">大行李放置區離座位較遠，貴重物隨身</div></li>
-      <li><span class="t">12:30</span><div class="what">抵達、入住或寄放行李</div><div class="mom">住宿選歌劇院／聖拉扎爾一帶，平坦好走</div></li>
-      <li><span class="t">15:00</span><div class="what"><a href="https://maps.google.com/?q=Cathedrale+Notre-Dame+de+Paris" target="_blank" rel="noopener">聖母院</a>、西堤島與塞納河畔慢走</div><div class="mom">以平坦河岸路線為主，天黑前看景</div></li>
-      <li><span class="t">17:00</span><div class="what"><a href="https://maps.google.com/?q=Jardin+des+Tuileries+Paris" target="_blank" rel="noopener">杜樂麗花園</a>聖誕市集與晚餐</div><div class="mom">market 人潮多，背包放身前</div></li>
+      <li><span class="t">上午</span><div class="what"><a href="https://maps.google.com/?q=Cathedrale+Notre-Dame+de+Paris" target="_blank" rel="noopener">巴黎聖母院</a>、<a href="https://maps.google.com/?q=Shakespeare+and+Company+Paris" target="_blank" rel="noopener">莎士比亞書店</a>、拉丁區</div><div class="mom">較晚出門即可，以計程車到核心區後步行</div></li>
+      <li><span class="t">下午</span><div class="what">自由購物、伴手禮採買</div><div class="mom">採買較多直接叫車回飯店</div></li>
+      <li><span class="t">傍晚</span><div class="what">整理行李、確認退稅單據</div><div class="mom">巧克力餅乾放硬殼行李中央；預留 20% 行李空間</div></li>
+      <li><span class="t">晚上</span><div class="what">🍷 旅程最後一餐・法式晚餐</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>Eurostar 為指定班次票，錯過不易改；當天早上不要排其他行程。</li>
-      <li>抵達日不排博物館，留給隔日完整體力。</li>
+      <li>不安排登高與長距離博物館；重點是悠閒與預留整理行李時間。</li>
+      <li>下雨改左岸咖啡館、百貨與室內教堂。</li>
     </ul></div>
   </article>
 
   <!-- DAY 10 -->
   <article class="day" id="d10">
-    <div class="day-head lux"><span class="dnum">DAY 10</span><h3>巴黎經典慢遊・少走路版</h3><span class="base">📍 巴黎</span></div>
+    <div class="day-head end"><span class="dnum">DAY 10</span><h3>巴黎 ✈ 台灣</h3><span class="base">📍 CDG 機場 → 機上</span></div>
+    <div class="stats"><span class="stat">👣 <b>4,000–7,000</b> 步</span><span class="stat">難度 ⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">09:45</span><div class="what"><a href="https://maps.google.com/?q=Musee+d%27Orsay+Paris" target="_blank" rel="noopener">奧塞美術館</a>或羅浮宮精選路線（二選一）</div><div class="mom">預約時段；奧塞規模較小、座椅多，較不累</div></li>
-      <li><span class="t">12:30</span><div class="what">午餐</div><div class="mom">安排完整 60–90 分鐘室內休息</div></li>
-      <li><span class="t">14:30</span><div class="what">塞納河遊船</div><div class="mom">坐著看巴黎，選有暖氣封閉船艙班次</div></li>
-      <li><span class="t">16:30</span><div class="what"><a href="https://maps.google.com/?q=Galeries+Lafayette+Haussmann+Paris" target="_blank" rel="noopener">老佛爺百貨</a>聖誕櫥窗與穹頂</div><div class="mom">室內看聖誕樹，有電梯與座位</div></li>
-      <li><span class="t">18:00</span><div class="what"><a href="https://maps.google.com/?q=Avenue+des+Champs-Elysees+Paris" target="_blank" rel="noopener">香榭麗舍</a>聖誕燈飾（視體力）</div><div class="mom">累了可只在百貨區用晚餐後回飯店</div></li>
-    </ul></div>
-    <div class="day-note"><b>當日備註</b><ul>
-      <li>艾菲爾鐵塔以遠眺或車上欣賞為主，不安排登塔排隊。</li>
-      <li>下雨時改百貨公司＋咖啡館室內日。</li>
+      <li><span class="t">起飛前 4.5–5 hr</span><div class="what">早餐後離開市區前往 CDG</div><div class="mom">建議預約接送或 G7 計程車；冬季尖峰多留 30–60 分鐘</div></li>
+      <li><span class="t">抵達機場</span><div class="what">辦理退稅、行李托運、安檢出境</div><div class="mom">退稅單據不放托運箱；排隊過長時以準時登機為優先</div></li>
+      <li><span class="t">候機</span><div class="what">確認登機門、補充飲水與簡單餐食</div></li>
+      <li><span class="t">飛行途中</span><div class="what">每 2–3 小時起身活動</div><div class="mom">藥品與保暖外套放隨身行李</div></li>
     </ul></div>
   </article>
 
   <!-- DAY 11 -->
   <article class="day" id="d11">
-    <div class="day-head end"><span class="dnum">DAY 11</span><h3>回程緩衝日</h3><span class="base">📍 巴黎 → 機場區</span></div>
+    <div class="day-head end"><span class="dnum">DAY 11</span><h3>抵達台灣・返家休息</h3><span class="base">📍 台灣</span></div>
+    <div class="stats"><span class="stat">👣 <b>2,000–4,000</b> 步</span><span class="stat">難度 ⭐</span></div>
     <div class="day-body"><ul class="tl">
-      <li><span class="t">上午</span><div class="what">市區採買伴手禮或自由散步</div><div class="mom">不排需大量步行的景點</div></li>
-      <li><span class="t">下午</span><div class="what">前往戴高樂機場區、入住機場飯店</div><div class="mom">若航班自阿姆斯特丹出發，改搭列車北返並住機場區</div></li>
-      <li><span class="t">傍晚</span><div class="what">簡單晚餐、整理行李與退稅單據</div><div class="mom">法國退稅可先在 App 或機台預辦</div></li>
-      <li><span class="t">晚上</span><div class="what">確認航廈、接送與起飛時間</div><div class="mom">至少保留一個交通緩衝日</div></li>
+      <li><span class="t">抵達</span><div class="what">入境、領行李、返家</div><div class="mom">預先安排家人接送或機場接送</div></li>
+      <li><span class="t">當天</span><div class="what">補水、清淡飲食、休息</div><div class="mom">避免立刻安排聚餐或工作，依睡眠逐步調時差</div></li>
     </ul></div>
     <div class="day-note"><b>當日備註</b><ul>
-      <li>長程旅行不建議最後一天才從市區直奔洲際班機。</li>
-      <li>機場飯店可大幅降低最後一天壓力。</li>
+      <li>返台後若下肢腫脹、呼吸不適或疼痛異常，應儘快就醫。</li>
     </ul></div>
   </article>
+</section>
 
-  <!-- DAY 12 -->
-  <article class="day" id="d12">
-    <div class="day-head end"><span class="dnum">DAY 12</span><h3>返台</h3><span class="base">📍 機場</span></div>
-    <div class="day-body"><ul class="tl">
-      <li><span class="t">起飛前 3–3.5 hr</span><div class="what">抵達機場</div><div class="mom">冬季可能遇到航班與鐵路延誤</div></li>
-      <li><span class="t">報到後</span><div class="what">安檢、退稅、候機</div><div class="mom">媽媽的藥品與保暖衣物放隨身行李</div></li>
-      <li><span class="t">登機</span><div class="what">返台 ✈️</div><div class="mom">機上定時起身與補水</div></li>
-    </ul></div>
-    <div class="day-note"><b>當日備註</b><ul>
-      <li>歐洲冬季衣物厚，回程行李體積通常增加，建議預留 20% 空間。</li>
-      <li>巧克力與餅乾集中放硬殼行李中央，避免壓碎。</li>
-    </ul></div>
-  </article>
+<!-- ============ 強度總覽 ============ -->
+<section id="pace">
+  <div class="sec-head">
+    <div class="en">Daily Intensity</div>
+    <h2>每日強度總覽</h2>
+    <p>長條為預估步數（上限以 15,000 步為滿格）</p>
+  </div>
+  <div class="card">
+    <ul class="intensity">
+      <li><span class="d">Day 1</span><div class="ibar"><i class="ams" style="width:27%"></i></div><div class="meta"><span class="stars">⭐</span><small>3,000–5,000 步</small></div></li>
+      <li><span class="d">Day 2</span><div class="ibar"><i class="ams" style="width:50%"></i></div><div class="meta"><span class="stars">⭐⭐</span><small>7,000–8,000 步</small></div></li>
+      <li><span class="d">Day 3</span><div class="ibar"><i class="ams" style="width:63%"></i></div><div class="meta"><span class="stars">⭐⭐⭐</span><small>9,000–10,000 步</small></div></li>
+      <li><span class="d">Day 4</span><div class="ibar"><i class="bru" style="width:57%"></i></div><div class="meta"><span class="stars">⭐⭐⭐</span><small>約 8,500 步</small></div></li>
+      <li><span class="d">Day 5</span><div class="ibar"><i class="bru" style="width:50%"></i></div><div class="meta"><span class="stars">⭐⭐</span><small>約 7,500 步</small></div></li>
+      <li><span class="d">Day 6</span><div class="ibar"><i class="lux" style="width:53%"></i></div><div class="meta"><span class="stars">⭐⭐</span><small>約 8,000 步</small></div></li>
+      <li><span class="d">Day 7</span><div class="ibar"><i class="lux" style="width:60%"></i></div><div class="meta"><span class="stars">⭐⭐⭐</span><small>約 9,000 步</small></div></li>
+      <li><span class="d">Day 8</span><div class="ibar"><i class="lux" style="width:47%"></i></div><div class="meta"><span class="stars">⭐⭐–⭐⭐⭐⭐</span><small>7,000 步（凡爾賽 15,000）</small></div></li>
+      <li><span class="d">Day 9</span><div class="ibar"><i class="lux" style="width:43%"></i></div><div class="meta"><span class="stars">⭐</span><small>約 6,500 步</small></div></li>
+      <li><span class="d">Day 10</span><div class="ibar"><i class="end" style="width:37%"></i></div><div class="meta"><span class="stars">⭐</span><small>4,000–7,000 步</small></div></li>
+      <li><span class="d">Day 11</span><div class="ibar"><i class="end" style="width:20%"></i></div><div class="meta"><span class="stars">⭐</span><small>2,000–4,000 步</small></div></li>
+    </ul>
+  </div>
 </section>
 <!-- ============ 住宿 ============ -->
 <section id="stay">
@@ -519,27 +594,27 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
   </div>
   <div class="grid grid-3">
     <div class="card info-card">
-      <h3>🌷 阿姆斯特丹</h3>
+      <h3>🌷 阿姆斯特丹（3 晚）</h3>
       <ul>
         <li>優先：Amsterdam Centraal 周邊、Zuid、De Pijp 電車站附近。</li>
-        <li>條件：電梯、24 小時櫃台、距車站／電車站 5–8 分鐘內。</li>
-        <li>避開：只有陡峭樓梯的運河屋、小房間且無電梯的老旅館。</li>
+        <li>電梯、24 小時櫃台、距車站／電車站 5–8 分鐘內。</li>
+        <li>避開只有陡峭樓梯的運河屋與無電梯老旅館。</li>
       </ul>
     </div>
     <div class="card info-card">
-      <h3>🍫 布魯塞爾</h3>
+      <h3>🍫 布魯塞爾（2 晚）</h3>
       <ul>
         <li>優先：Brussels Central、Grand-Place 外圍、De Brouckère。</li>
         <li>可步行到市集，但不要住最吵的攤位正旁邊。</li>
-        <li>若用 Brussels Midi，白天轉車即可；晚間拖行李建議叫車。</li>
+        <li>晚間拖行李移動以計程車為優先。</li>
       </ul>
     </div>
     <div class="card info-card">
-      <h3>🗼 巴黎</h3>
+      <h3>🗼 巴黎（4 晚）</h3>
       <ul>
         <li>優先：歌劇院、聖拉扎爾、羅浮宮周邊 1–2 區與 9 區。</li>
-        <li>巴黎老建築常無電梯，訂房務必確認電梯可達客房樓層。</li>
-        <li>避開北站深夜周邊；晚間拖行李以計程車為優先。</li>
+        <li>以地鐵轉乘少、附近可叫車且晚間有人流的區域為主。</li>
+        <li>避開北站深夜周邊偏僻街區。</li>
       </ul>
     </div>
   </div>
@@ -547,13 +622,13 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
     <h3>✅ 訂房必勾選（勾選狀態會自動儲存）</h3>
     <div class="progress"><i data-bar="booking"></i></div>
     <ul class="ck" data-group="booking">
-      <li><label><input type="checkbox"><span>電梯可到客房樓層（必要）</span></label></li>
-      <li><label><input type="checkbox"><span>步行 8 分鐘內可到車站（必要）</span></label></li>
-      <li><label><input type="checkbox"><span>暖氣評價穩定（必要）</span></label></li>
-      <li><label><input type="checkbox"><span>雙床房或較大床型（必要）</span></label></li>
+      <li><label><input type="checkbox"><span>有電梯，且訂房頁面明確標示（歐洲老建築可能僅有小型電梯）</span></label></li>
+      <li><label><input type="checkbox"><span>距主要車站或大眾運輸步行 5–10 分鐘內</span></label></li>
+      <li><label><input type="checkbox"><span>雙床房確認為兩張獨立床，而非一張雙人床加兩條棉被</span></label></li>
+      <li><label><input type="checkbox"><span>浴室乾濕分離、非高跨浴缸；可向飯店詢問防滑墊</span></label></li>
+      <li><label><input type="checkbox"><span>暖氣評價穩定</span></label></li>
       <li><label><input type="checkbox"><span>早餐在館內（加分）</span></label></li>
       <li><label><input type="checkbox"><span>可寄放行李（加分）</span></label></li>
-      <li><label><input type="checkbox"><span>淋浴間有扶手（加分）</span></label></li>
       <li><label><input type="checkbox"><span>房內熱水壺（加分）</span></label></li>
     </ul>
   </div>
@@ -563,34 +638,26 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <section id="budget">
   <div class="sec-head">
     <div class="en">Budget</div>
-    <h2>預算概算（2 人，不含購物）</h2>
-    <p>規劃用區間；實際價格受航班、住宿等級、週末與聖誕檔期影響</p>
+    <h2>兩人預算架構（待日期確認後精算）</h2>
+    <p>先掌握項目與控制重點，第二階段補上實際票價</p>
   </div>
   <div class="card" style="padding:0;overflow:hidden">
     <div class="tbl-wrap" style="border:none">
       <table>
-        <thead><tr><th>項目</th><th>兩人估算</th><th>說明</th></tr></thead>
+        <thead><tr><th>項目</th><th>估價方式</th><th>控制重點</th></tr></thead>
         <tbody>
-          <tr><td>台灣往返歐洲機票</td><td><b>NT$60,000–90,000</b></td><td>經濟艙，視轉機與行李</td></tr>
-          <tr><td>住宿 11 晚</td><td><b>NT$75,000–118,000</b></td><td>雙人房、交通方便、含稅概估（巴黎略高）</td></tr>
-          <tr><td>跨國與城際交通</td><td><b>NT$18,000–28,000</b></td><td>提早訂較有機會壓低成本</td></tr>
-          <tr><td>餐飲</td><td><b>NT$30,000–45,000</b></td><td>每日一餐較完整餐廳＋簡餐</td></tr>
-          <tr><td>景點門票</td><td><b>NT$10,000–16,000</b></td><td>博物館、遊船等</td></tr>
-          <tr><td>保險／網路／雜支</td><td><b>NT$8,000–14,000</b></td><td>旅平險、eSIM、計程車彈性</td></tr>
+          <tr><td>機票</td><td>多點進出（AMS 進、CDG 出）含托運</td><td>優先直飛；跨聯盟湊票會變兩張單程較貴</td></tr>
+          <tr><td>住宿</td><td>3＋2＋4 晚雙床房</td><td>電梯、早餐、可取消</td></tr>
+          <tr><td>跨國火車</td><td>Eurostar 兩張</td><td>提早買並選彈性條件</td></tr>
+          <tr><td>地方交通</td><td>OVpay、比利時火車、巴黎交通票</td><td>以少轉乘為優先</td></tr>
+          <tr><td>包車／一日團</td><td>羊角村（A 案時）</td><td>用金錢換體力與穩定</td></tr>
+          <tr><td>門票</td><td>遊船、羅浮宮、Light Festival、Day 8 選項</td><td>只訂確定會去的時段票</td></tr>
+          <tr><td>餐食</td><td>早餐＋每日一餐正式坐下用餐</td><td>長輩不宜整天只吃小吃</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="total">兩人總預算建議：約 <b>NT$201,000–311,000</b>｜鎖定四星飯店、直飛或熱門週末需再提高</div>
-  <div class="card info-card" style="margin-top:16px">
-    <h3>💰 省錢不省體力的做法</h3>
-    <ul>
-      <li>Eurostar 與跨國列車越早訂越便宜，但市區行程不要全部綁死。</li>
-      <li>午餐吃完整餐廳，晚餐改超市熟食或飯店附近簡餐。</li>
-      <li>住宿以交通便利優先，不為了省房價住太遠。</li>
-      <li>只買真正會用的城市卡；媽媽同行不適合為回本而趕景點。</li>
-    </ul>
-  </div>
+  <div class="total">💡 直飛參考：荷航／華航直飛阿姆斯特丹、長榮 BR087 直飛巴黎；荷航一張多城市票（回程 CDG 經 AMS 轉一次）通常比跨聯盟兩張單程划算</div>
 </section>
 
 <!-- ============ 健康安全清單 ============ -->
@@ -598,7 +665,7 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
   <div class="sec-head">
     <div class="en">Health & Safety</div>
     <h2>媽媽同行健康與安全清單</h2>
-    <p>可直接當出發前與旅途中的核對清單，勾選狀態自動儲存</p>
+    <p>出發前與旅途中的核對清單，勾選狀態自動儲存</p>
   </div>
   <div class="grid grid-2">
     <div class="card check-group">
@@ -625,20 +692,20 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
       <h3>🔒 防扒與財物</h3>
       <div class="progress"><i data-bar="safe"></i></div>
       <ul class="ck" data-group="safe">
-        <li><label><input type="checkbox"><span>手機掛繩或拉鍊袋，避免放外套口袋</span></label></li>
-        <li><label><input type="checkbox"><span>護照與備用卡分開保管</span></label></li>
-        <li><label><input type="checkbox"><span>火車上下車時特別注意行李</span></label></li>
+        <li><label><input type="checkbox"><span>護照、手機、信用卡分開收納；大額現金分散</span></label></li>
+        <li><label><input type="checkbox"><span>手機掛繩或拉鍊袋，不放外套口袋</span></label></li>
+        <li><label><input type="checkbox"><span>火車上下車與巴黎北站特別注意行李</span></label></li>
         <li><label><input type="checkbox"><span>聖誕市集人潮中背包移至身前</span></label></li>
       </ul>
     </div>
     <div class="card check-group night">
-      <h3>❄️ 冬季應變</h3>
-      <div class="progress"><i data-bar="winter"></i></div>
-      <ul class="ck" data-group="winter">
-        <li><label><input type="checkbox"><span>前一晚確認鐵路罷工、工程或天氣警報</span></label></li>
-        <li><label><input type="checkbox"><span>準備一個完整室內備案</span></label></li>
-        <li><label><input type="checkbox"><span>跨國移動日不排不可取消的預約活動</span></label></li>
-        <li><label><input type="checkbox"><span>最後一晚住回程機場城市</span></label></li>
+      <h3>🧳 行李與移動</h3>
+      <div class="progress"><i data-bar="luggage"></i></div>
+      <ul class="ck" data-group="luggage">
+        <li><label><input type="checkbox"><span>每人一件 24–26 吋行李＋可固定拉桿的隨身包</span></label></li>
+        <li><label><input type="checkbox"><span>冬季外套穿在身上，不占行李箱空間</span></label></li>
+        <li><label><input type="checkbox"><span>火車到站前 10 分鐘整理，不要最後一刻取箱</span></label></li>
+        <li><label><input type="checkbox"><span>前一晚確認罷工、工程或天氣警報</span></label></li>
       </ul>
     </div>
   </div>
@@ -648,15 +715,17 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <section id="booking">
   <div class="sec-head">
     <div class="en">Booking Timeline</div>
-    <h2>出發前預訂時間軸</h2>
+    <h2>出發前交通與預訂時間軸</h2>
   </div>
   <div class="card">
     <ul class="book-tl">
-      <li><h3>出發前 6–9 個月</h3><p>確認旅行日期、機票與主要住宿；優先選可取消方案。</p></li>
-      <li><h3>出發前 3–5 個月</h3><p>預訂跨國列車、熱門博物館與運河船；確認媽媽護照效期與保險。</p></li>
-      <li><h3>出發前 1 個月</h3><p>確認 2026 各城市聖誕市集最終日期、冬季施工、罷工公告。</p></li>
-      <li><h3>出發前 7 天</h3><p>下載 NS、SNCB、SNCF Connect／Bonjour RATP、Google Maps 與離線地圖；檢查天氣。</p></li>
-      <li><h3>出發前 1 天</h3><p>確認班機、機場交通、跨國列車月台與住宿入住方式。</p></li>
+      <li><h3>確認日期後立即</h3><p>比價多點進出機票（阿姆斯特丹進、巴黎出）；核對羅浮宮週二休、奧賽與凡爾賽週一休，先定 Day 7／8 順序。</p></li>
+      <li><h3>出發前 4–8 個月</h3><p>訂可取消的三地住宿；確認電梯、房內暖氣、步行距離與雙床房型。</p></li>
+      <li><h3>開放售票後</h3><p>購買 Brussels-Midi → Paris Gare du Nord 的 Eurostar 車票，選彈性票種。</p></li>
+      <li><h3>出發前 2–4 個月</h3><p>預約羅浮宮時段票、羊角村一日團（A 案）、運河遊船與 Light Festival 船班。</p></li>
+      <li><h3>出發前 1–2 個月</h3><p>決定 Day 8 方案；若選凡爾賽再購票。</p></li>
+      <li><h3>出發前 2 週</h3><p>下載 NS、Eurostar、Bonjour RATP、G7 與離線地圖；截圖所有票券。</p></li>
+      <li><h3>出發前 3 天</h3><p>依天氣決定 Day 2 的 A／B 案；確認罷工、工程與班次。</p></li>
     </ul>
   </div>
 </section>
@@ -668,11 +737,12 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
     <h2>建議使用的官方資訊</h2>
   </div>
   <div class="links">
-    <a href="https://www.nsinternational.com/en" target="_blank" rel="noopener"><b>🚄 荷蘭鐵路 NS International</b><span>荷蘭境內與阿姆斯特丹—布魯塞爾跨國列車</span></a>
-    <a href="https://www.belgiantrain.be/en" target="_blank" rel="noopener"><b>🚆 比利時國鐵 SNCB／NMBS</b><span>布魯塞爾、布魯日、根特等國內線</span></a>
+    <a href="https://www.ns.nl/en" target="_blank" rel="noopener"><b>🚆 荷蘭鐵路 NS</b><span>荷蘭境內班次與 OVpay 說明</span></a>
+    <a href="https://www.belgiantrain.be/en" target="_blank" rel="noopener"><b>🚆 比利時國鐵 SNCB</b><span>布魯塞爾—布魯日班次查詢</span></a>
     <a href="https://www.eurostar.com/" target="_blank" rel="noopener"><b>🚄 Eurostar</b><span>布魯塞爾—巴黎跨國列車訂票</span></a>
-    <a href="https://www.sncf-connect.com/en-en/" target="_blank" rel="noopener"><b>🚆 法國國鐵 SNCF Connect</b><span>法國境內列車與時刻查詢</span></a>
-    <a href="https://www.brussels.be/winter-wonders" target="_blank" rel="noopener"><b>🎄 布魯塞爾 Winter Wonders</b><span>2026 活動日期：11/27 – 2027/1/3</span></a>
+    <a href="https://www.ratp.fr/en" target="_blank" rel="noopener"><b>🚇 巴黎大眾運輸 RATP</b><span>地鐵、公車路線與票價</span></a>
+    <a href="https://amsterdamlightfestival.com/" target="_blank" rel="noopener"><b>✨ Amsterdam Light Festival</b><span>冬季燈節日期與遊船預訂</span></a>
+    <a href="https://www.brussels.be/winter-wonders" target="_blank" rel="noopener"><b>🎄 布魯塞爾 Winter Wonders</b><span>聖誕市集官方資訊</span></a>
   </div>
 </section>
 
@@ -680,15 +750,15 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 
 <footer>
   <div class="en">Christmas in Europe</div>
-  <p>荷比法 12 天慢旅行｜媽媽同行版・第一版行程骨架</p>
-  <p style="opacity:.7">待實際旅行日期與航班確認後，再將 DAY 1、11、12 調整為正式版本</p>
+  <p>荷比法 11 天 9 夜慢旅行｜媽媽同行版・第一階段 V2.0</p>
+  <p style="opacity:.7">日期與航班確認後，第二階段補上精準班次、住宿候選、每日餐廳與費用試算</p>
 </footer>
 
 <button class="top-btn" id="topBtn" aria-label="回到頁首">↑</button>
 
 <script>
 (function(){
-  /* ===== 飄雪與燈串（尊重減少動態偏好） ===== */
+  /* ===== 飄雪與燈串 ===== */
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!reduced){
     var snow = document.getElementById('snow');
@@ -714,12 +784,12 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 
   /* ===== 每日導覽列 ===== */
   var days=[
-    {id:'d1',n:1,t:'抵達',c:'ams'},{id:'d2',n:2,t:'阿姆初見',c:'ams'},
-    {id:'d3',n:3,t:'國家博物館',c:'ams'},{id:'d4',n:4,t:'風車村',c:'ams'},
-    {id:'d5',n:5,t:'→布魯塞爾',c:'bru'},{id:'d6',n:6,t:'城市慢遊',c:'bru'},
-    {id:'d7',n:7,t:'布魯日',c:'bru'},{id:'d8',n:8,t:'根特',c:'bru'},
-    {id:'d9',n:9,t:'→巴黎',c:'lux'},{id:'d10',n:10,t:'巴黎慢遊',c:'lux'},
-    {id:'d11',n:11,t:'回程緩衝',c:'end'},{id:'d12',n:12,t:'返台',c:'end'}
+    {id:'d1',n:1,t:'抵達',c:'ams'},{id:'d2',n:2,t:'羊角村/市區',c:'ams'},
+    {id:'d3',n:3,t:'風車村',c:'ams'},{id:'d4',n:4,t:'→布魯日',c:'bru'},
+    {id:'d5',n:5,t:'布魯塞爾',c:'bru'},{id:'d6',n:6,t:'→巴黎',c:'lux'},
+    {id:'d7',n:7,t:'羅浮宮',c:'lux'},{id:'d8',n:8,t:'三選一',c:'lux'},
+    {id:'d9',n:9,t:'留白日',c:'lux'},{id:'d10',n:10,t:'返程',c:'end'},
+    {id:'d11',n:11,t:'抵台',c:'end'}
   ];
   var rail=document.getElementById('dayRail');
   days.forEach(function(d){
@@ -731,7 +801,6 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
     });
     rail.appendChild(b);
   });
-  /* 捲動時高亮目前日期 */
   if('IntersectionObserver' in window){
     var chips=rail.children;
     var io=new IntersectionObserver(function(es){
@@ -746,42 +815,45 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
     days.forEach(function(d){io.observe(document.getElementById(d.id))});
   }
 
+  /* ===== 方案分頁（Day 2 / Day 8） ===== */
+  document.querySelectorAll('.opt-tabs').forEach(function(tabs){
+    var art=tabs.closest('.day');
+    tabs.querySelectorAll('.opt-tab').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        tabs.querySelectorAll('.opt-tab').forEach(function(b){b.classList.remove('active')});
+        btn.classList.add('active');
+        art.querySelectorAll('.opt-panel').forEach(function(p){
+          p.classList.toggle('active',p.id===btn.getAttribute('data-panel'));
+        });
+      });
+    });
+  });
+
   /* ===== 勾選清單：儲存與進度 ===== */
-  var KEY='benelux-trip-checks';
-  function load(){
-    try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}
-  }
-  function save(state){
-    try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
-  }
+  var KEY='benelux-france-v2-checks';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+  function save(s){try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
   var state=load();
   document.querySelectorAll('.ck').forEach(function(list){
     var g=list.getAttribute('data-group');
     var boxes=list.querySelectorAll('input[type=checkbox]');
     var bar=document.querySelector('[data-bar="'+g+'"]');
     function refresh(){
-      var done=0;
-      boxes.forEach(function(b){if(b.checked)done++});
+      var done=0; boxes.forEach(function(b){if(b.checked)done++});
       if(bar)bar.style.width=(boxes.length?Math.round(done/boxes.length*100):0)+'%';
     }
     boxes.forEach(function(b,i){
       var k=g+'-'+i;
       if(state[k])b.checked=true;
-      b.addEventListener('change',function(){
-        state[k]=b.checked; save(state); refresh();
-      });
+      b.addEventListener('change',function(){state[k]=b.checked; save(state); refresh();});
     });
     refresh();
   });
 
   /* ===== 回頂端 ===== */
   var top=document.getElementById('topBtn');
-  window.addEventListener('scroll',function(){
-    top.classList.toggle('show',window.scrollY>700);
-  },{passive:true});
-  top.addEventListener('click',function(){
-    window.scrollTo({top:0,behavior:reduced?'auto':'smooth'});
-  });
+  window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>700)},{passive:true});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});
 })();
 </script>
 </body>
