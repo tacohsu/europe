@@ -24,7 +24,7 @@ body{font-family:var(--zh);color:var(--ink);background:var(--paper);line-height:
 a{text-decoration:none;color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
 
-.hero{position:relative;overflow:hidden;text-align:center;color:#F6F1E4;padding:76px 20px 64px;
+.hero{position:relative;overflow:hidden;text-align:center;color:#F6F1E4;padding:70px 20px 150px;
   background:linear-gradient(180deg,#0C1622 0%,#111C2C 55%,#1D2E3E 100%)}
 .hero .eyebrow{font-family:var(--en);letter-spacing:.42em;font-size:.85rem;font-weight:600;color:var(--gold-soft);text-transform:uppercase;margin-bottom:14px}
 .hero h1{font-family:var(--zh-serif);font-weight:900;font-size:clamp(1.9rem,5.4vw,3rem);letter-spacing:.08em}
@@ -44,7 +44,7 @@ section{padding:54px 0 8px}
 
 /* 三方案卡 */
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:-96px;position:relative;z-index:5}
-@media (max-width:860px){.plans{grid-template-columns:1fr;margin-top:-70px}}
+@media (max-width:860px){.plans{grid-template-columns:1fr;margin-top:-110px}}
 .plan{display:flex;flex-direction:column;background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
 .plan:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(17,28,44,.18)}
 .plan .top{color:#fff;padding:18px 20px 20px;min-height:150px;display:flex;flex-direction:column}
@@ -100,6 +100,11 @@ tr.hl td:first-child{color:#8A6A1F}
 
 footer{margin-top:60px;background:var(--night);color:#C9C3B2;text-align:center;padding:32px 18px 44px;font-size:.85rem;line-height:2}
 footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);font-size:.8rem;text-transform:uppercase}
+
+.claude-view{margin-top:22px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+.claude-view .cv-head{font-family:var(--zh-serif);font-weight:900;font-size:1.05rem;letter-spacing:.06em;margin-bottom:10px}
+.claude-view p{font-size:.9rem;color:var(--muted);margin-top:10px;line-height:1.85}
+.claude-view p b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -118,45 +123,45 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <div class="plans">
   <a class="plan cz" href="cz-at.html">
     <div class="top">
-      <div class="meta"><span class="flag">🇨🇿🇦🇹</span><span class="rank first">👑 綜合首選 9.8</span></div>
+      <div class="meta"><span class="flag">🇨🇿🇦🇹</span><span class="rank first">👑 綜合首選 92 分</span></div>
       <div class="tt"><div class="en-t">Czechia + Austria</div>
       <h3>捷克＋奧地利</h3>
       <div class="theme">童話古城 × 皇宮 × 聖誕市集</div></div>
     </div>
     <div class="body">
-      <div class="feat"><span>🏰 城堡</span><span>👑 皇宮</span><span>☕ 咖啡館</span><span>🎻 古典音樂</span><span>🎄 聖誕市集</span></div>
-      <div class="fit"><b>最適合：</b>重視悠閒、聖誕氣氛、咖啡館與古城；換飯店最少（僅 1 次）、長輩友善度最高。</div>
-      <div class="score"><b>9.8</b><small>/10・綜合推薦</small></div>
-      <span class="go">查看完整行程 →</span>
-    </div>
-  </a>
-
-  <a class="plan fr" href="nl-be-fr.html">
-    <div class="top">
-      <div class="meta"><span class="flag">🇳🇱🇧🇪🇫🇷</span><span class="rank">第 2 名 9.4</span></div>
-      <div class="tt"><div class="en-t">Netherlands · Belgium · France</div>
-      <h3>荷比法</h3>
-      <div class="theme">運河 × 古城 × 巴黎 × 聖誕節</div></div>
-    </div>
-    <div class="body">
-      <div class="feat"><span>🗼 巴黎鐵塔</span><span>🖼 羅浮宮</span><span>🚤 羊角村</span><span>🏰 布魯日</span><span>🛍 購物最強</span></div>
-      <div class="fit"><b>最適合：</b>第一次歐洲、媽媽一直想看巴黎鐵塔與羅浮宮的經典地標組合。</div>
-      <div class="score"><b>9.4</b><small>/10・綜合推薦</small></div>
+      <div class="feat"><span>🏰 城堡</span><span>👑 皇宮</span><span>☕ 咖啡館</span><span>🎄 聖誕市集</span><span>🧳 只換 1 次飯店</span></div>
+      <div class="fit"><b>最突出：</b>聖誕氣氛、交通簡單、節奏最好控制。布拉格—維也納 Railjet 直達約 4 小時，媽媽累了行程最容易調整。</div>
+      <div class="score"><b>92</b><small>/100・加權總分</small></div>
       <span class="go">查看完整行程 →</span>
     </div>
   </a>
 
   <a class="plan nz" href="nz.html">
     <div class="top">
-      <div class="meta"><span class="flag">🇳🇿</span><span class="rank">第 3 名 9.0</span></div>
-      <div class="tt"><div class="en-t">New Zealand · South Island</div>
-      <h3>紐西蘭南島</h3>
-      <div class="theme">湖泊 × 高山 × 星空</div></div>
+      <div class="meta"><span class="flag">🇳🇿</span><span class="rank">🥈 第 2 名 90 分</span></div>
+      <div class="tt"><div class="en-t">New Zealand · North + South</div>
+      <h3>紐西蘭北＋南島</h3>
+      <div class="theme">哈比村 × 地熱 × 湖泊 × 星空</div></div>
     </div>
     <div class="body">
-      <div class="feat"><span>🏔 雪山</span><span>🌊 湖泊</span><span>🌌 星空</span><span>⛵ 峽灣</span><span>☀️ 南半球夏天</span></div>
-      <div class="fit"><b>最適合：</b>熱愛自然景觀、願意接受較多拉車；12 月正值當地夏季，氣候對長輩最舒適。</div>
-      <div class="score"><b>9.0</b><small>/10・綜合推薦</small></div>
+      <div class="feat"><span>🚪 哈比村</span><span>♨️ 地熱溫泉</span><span>🗻 庫克山</span><span>🌌 星空</span><span>☀️ 南半球夏天</span></div>
+      <div class="fit"><b>最突出：</b>景觀最多元、12 月氣候舒服、旅行記憶最豐富。北島 4 天＋南島 5 天一路往南；代價是兩段國內線與 4 次換宿。</div>
+      <div class="score"><b>90</b><small>/100・加權總分</small></div>
+      <span class="go">查看完整行程 →</span>
+    </div>
+  </a>
+
+  <a class="plan fr" href="nl-be-fr.html">
+    <div class="top">
+      <div class="meta"><span class="flag">🇳🇱🇧🇪🇫🇷</span><span class="rank">🥉 第 3 名 87 分</span></div>
+      <div class="tt"><div class="en-t">Netherlands · Belgium · France</div>
+      <h3>荷比法</h3>
+      <div class="theme">運河 × 古城 × 巴黎 × 聖誕節</div></div>
+    </div>
+    <div class="body">
+      <div class="feat"><span>🗼 巴黎鐵塔</span><span>🖼 羅浮宮</span><span>🚤 羊角村</span><span>🏰 布魯日</span><span>🛍 購物最強</span></div>
+      <div class="fit"><b>最突出：</b>經典地標最多、第一次歐洲代表性最強。若媽媽把「去歐洲」直接聯想到巴黎鐵塔，另外兩案很難取代它。</div>
+      <div class="score"><b>87</b><small>/100・加權總分</small></div>
       <span class="go">查看完整行程 →</span>
     </div>
   </a>
@@ -165,31 +170,28 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <!-- 比較表 -->
 <section id="compare">
   <div class="sec-head">
-    <div class="en">Side by Side</div>
-    <h2>三方案比較</h2>
-    <p>皆以 11 天 9 夜（含飛行）為基準，公平比較</p>
+    <div class="en">Weighted Scoring</div>
+    <h2>綜合評分表</h2>
+    <p>統一條件：12 月出發・11 天 9 夜・媽媽同行・自由行與舒適度優先<br>依旅行條件所做的規劃評估，不是客觀景點排名</p>
   </div>
   <div class="tbl-wrap">
     <table>
-      <thead><tr><th>項目</th><th>🇳🇱🇧🇪🇫🇷 荷比法</th><th>🇨🇿🇦🇹 捷克奧地利</th><th>🇳🇿 紐西蘭</th></tr></thead>
+      <thead><tr><th>評比項目</th><th>權重</th><th>🇨🇿🇦🇹 捷克奧地利</th><th>🇳🇿 紐西蘭北＋南島</th><th>🇳🇱🇧🇪🇫🇷 荷比法</th></tr></thead>
       <tbody>
-        <tr><td>第一次歐洲</td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐⭐⭐⭐⭐</td><td class="dim">—</td></tr>
-        <tr><td>聖誕氣氛</td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐<span class="dim">☆☆☆☆</span></td></tr>
-        <tr><td>古城</td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐⭐<span class="dim">☆☆☆</span></td></tr>
-        <tr><td>皇宮／城堡</td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐<span class="dim">☆☆☆☆</span></td></tr>
-        <tr><td>自然景觀</td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td><td class="stars">⭐⭐⭐⭐⭐</td></tr>
-        <tr><td>美食</td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td></tr>
-        <tr><td>咖啡館文化</td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td></tr>
-        <tr><td>購物</td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐<span class="dim">☆☆☆</span></td></tr>
-        <tr><td>長輩友善</td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐⭐⭐</td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td></tr>
-        <tr><td>自由行難度</td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span></td><td class="stars">⭐⭐⭐⭐<span class="dim">☆</span></td><td class="stars">⭐⭐⭐<span class="dim">☆☆</span>（建議自駕）</td></tr>
-        <tr class="hl"><td>綜合推薦</td><td class="score-cell">9.4 / 10</td><td class="score-cell">9.8 / 10 👑</td><td class="score-cell">9.0 / 10</td></tr>
+        <tr><td>媽媽同行舒適度</td><td>20%</td><td class="score-cell">9.5</td><td>8.3</td><td>8.2</td></tr>
+        <tr><td>交通與行程難度</td><td>15%</td><td class="score-cell">9.5</td><td>7.5</td><td>8.5</td></tr>
+        <tr><td>12 月季節特色</td><td>15%</td><td class="score-cell">10</td><td>9.5</td><td>8.5</td></tr>
+        <tr><td>景點與體驗豐富度</td><td>15%</td><td>8.8</td><td class="score-cell">10</td><td>9.5</td></tr>
+        <tr><td>旅行節奏</td><td>10%</td><td class="score-cell">9.5</td><td>7.8</td><td>8.0</td></tr>
+        <tr><td>經典與驚艷程度</td><td>10%</td><td>9.0</td><td class="score-cell">10</td><td>9.8</td></tr>
+        <tr><td>飲食、購物、休息便利</td><td>10%</td><td>9.0</td><td>8.0</td><td class="score-cell">9.3</td></tr>
+        <tr><td>天候風險與備案</td><td>5%</td><td>7.8</td><td class="score-cell">8.0</td><td>7.5</td></tr>
+        <tr class="hl"><td>加權總分</td><td>100%</td><td class="score-cell">92 👑</td><td class="score-cell">90</td><td class="score-cell">87</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- 決策指南 -->
 <section id="guide">
   <div class="sec-head">
     <div class="en">Decision Guide</div>
@@ -197,19 +199,28 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
   </div>
   <div class="guide">
     <div class="gcase">
-      <div class="if">媽媽最重視悠閒、聖誕氣氛、咖啡館與古城</div>
-      <div class="then">→ 選 <a href="cz-at.html">捷克＋奧地利</a></div>
+      <div class="if">想要 12 月限定的聖誕氣氛、走得舒服、把旅行安排得最穩定</div>
+      <div class="then">→ 選 <a href="cz-at.html">捷克＋奧地利</a><p style="font-size:.82rem;color:var(--muted);margin-top:6px;font-family:var(--zh);font-weight:400">最理性的選擇：城市少、交通簡單、累了容易刪行程。</p></div>
     </div>
     <div class="gcase">
-      <div class="if">媽媽一直想看巴黎鐵塔、羅浮宮，第一次歐洲想看經典景點</div>
-      <div class="then">→ 選 <a href="nl-be-fr.html">荷比法</a></div>
+      <div class="if">怕歐洲冬天的冷、想一次看最多不同景觀、未來可能不會再去紐西蘭</div>
+      <div class="then">→ 選 <a href="nz.html">紐西蘭北＋南島</a><p style="font-size:.82rem;color:var(--muted);margin-top:6px;font-family:var(--zh);font-weight:400">最驚艷的選擇：前提是媽媽能接受國內線、換住宿與長途乘車。</p></div>
     </div>
     <div class="gcase">
-      <div class="if">你們都很愛自然景觀，願意安排較多拉車或自駕</div>
-      <div class="then">→ 選 <a href="nz.html">紐西蘭南島</a></div>
+      <div class="if">媽媽明確說過：一生至少想看一次巴黎鐵塔、羅浮宮</div>
+      <div class="then">→ 選 <a href="nl-be-fr.html">荷比法</a><p style="font-size:.82rem;color:var(--muted);margin-top:6px;font-family:var(--zh);font-weight:400">最有願望清單意義：如果她最想看巴黎，就不用再比分數。</p></div>
     </div>
   </div>
-  <div class="verdict">以這次的條件（<b>12 月・媽媽同行・慢旅行</b>）綜合排序：<b>捷克＋奧地利</b> 第一、<b>荷比法</b> 第二、<b>紐西蘭</b> 第三。</div>
+  <div class="verdict">最終排序：<b>捷奧 92</b> ＞ <b>紐西蘭北＋南島 90</b> ＞ <b>荷比法 87</b>｜前兩名差距很小，真正的決勝點是——<b>媽媽比較怕冷，還是比較怕長途坐車？</b></div>
+
+  <div class="claude-view">
+    <div class="cv-head">🤖 Claude 的觀點</div>
+    <p><b>這個加權框架我認同，但有三件事分數看不出來：</b></p>
+    <p><b>① 紐西蘭的 90 分有「隱藏成本」。</b>帳面上只輸捷奧 2 分，但它包含四段飛行（台北—奧克蘭來回＋兩段國內線）與 4 次換宿——每一項單獨看都不難，疊加起來對 60 歲的體感落差會比 2 分大。如果媽媽容易暈車或很在意搬行李，實際體驗可能落在 85 分附近；反之若她精力好、嚮往自然，這 90 分就是實打實的。</p>
+    <p><b>② 荷比法的 87 分是「可修復的低分」。</b>它被扣分的主因——換城市多、容易塞太滿、每天趕預約——正是我們在 V2.0 已經修掉的東西（三選一方案、留白日、每日步數控管）。若巴黎是媽媽的願望，照 V2 執行的實際體驗分我估計在 90 上下，不必因為帳面第三就放棄。</p>
+    <p><b>③ 捷奧唯一的真弱點是「冷」。</b>它在天候風險項目是三案最低分之一：12 月布拉格白天約 0–5°C，比荷比法再冷一截。如果媽媽平常在台灣 15°C 就喊冷，這個第一名要打個問號；保暖裝備的預算和重量也要提前算進去。</p>
+    <p><b>我的建議：直接拿三個問題問媽媽</b>——「妳比較怕冷還是怕坐車？」「巴黎鐵塔是不是一定要看？」「搬四次行李換一次看遍山湖星空，願不願意？」她的答案會比任何評分表準確。</p>
+  </div>
 </section>
 
 </main>
