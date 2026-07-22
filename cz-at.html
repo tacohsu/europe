@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>捷克＋奧地利 11 天 9 夜慢旅行｜媽媽同行版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#F6F1EA;--ink:#2B2622;--muted:#6E665C;--line:#E6DCCB;
+--accent:#B58A2E;--accent2:#7A4A2B;--accentSoft:#E4C06A;--accentSoftBd:rgba(228,192,106,.5);
+--heroBg:linear-gradient(180deg,#231320 0%,#3A1E2C 45%,#5A2634 100%);--heroDark:#2A1622;
+--cityA:#8C2F39;--cityB:#B58A2E;--cityC:#B58A2E;
+--gradA:linear-gradient(120deg,#6E222C,#8C2F39);--gradB:linear-gradient(120deg,#96701F,#B58A2E);
+--gradC:linear-gradient(120deg,#96701F,#B58A2E);--gradEnd:linear-gradient(120deg,#231320,#4A3A50);
+--icoBg:linear-gradient(150deg,#FBF1DC,#F2E1BC);--icoBd:#EBD6A8;
+--tipBg:#FAF2DF;--tipTx:#6B5423;--navBg:rgba(246,241,234,.92);
+--momBg:#FAF2DF;--momTx:#8A5A2B;--noteBg:#F1EDE4;
+--zh:'Noto Sans TC',"PingFang TC","Microsoft JhengHei",sans-serif;
+--zh-serif:'Noto Serif TC',serif;
+--en:'Cormorant Garamond',Georgia,serif;
+--shadow:0 6px 22px rgba(0,0,0,.09);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--zh);color:var(--ink);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.home-link{position:fixed;left:14px;top:12px;z-index:70;background:var(--heroDark);color:#F3EDDD;border:1px solid var(--accentSoftBd);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:700;letter-spacing:.05em;opacity:.92}
+.home-link:hover{text-decoration:none;opacity:1}
+.hero{position:relative;color:#F6F1E4;overflow:hidden;text-align:center;background:var(--heroBg);padding:70px 20px 56px}
+.hero .eyebrow{font-family:var(--en);letter-spacing:.4em;font-size:.85rem;font-weight:600;color:var(--accentSoft);text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:var(--zh-serif);font-weight:900;font-size:clamp(1.8rem,5.2vw,3rem);letter-spacing:.06em;line-height:1.3}
+.hero .sub{margin-top:12px;font-size:clamp(.95rem,2.6vw,1.08rem);color:#EAE3CE;letter-spacing:.1em}
+.hero .season{display:inline-block;margin-top:18px;padding:7px 20px;border:1px solid var(--accentSoftBd);border-radius:999px;color:var(--accentSoft);font-size:.88rem;letter-spacing:.12em}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+.hero-badges span{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 16px;font-size:.85rem}
+.hero-badges b{color:var(--accentSoft)}
+.deco{position:absolute;inset:0;pointer-events:none;opacity:.65}
+.deco i{position:absolute;color:var(--accentSoft);animation:tw 3.6s ease-in-out infinite;font-size:10px}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:.9}}
+@media (prefers-reduced-motion:reduce){.deco i{animation:none}html{scroll-behavior:auto}}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px}
+section{padding:50px 0 8px}
+.sec-head{text-align:center;margin-bottom:28px}
+.sec-head .en{font-family:var(--en);letter-spacing:.32em;font-size:.8rem;font-weight:600;color:var(--accent);text-transform:uppercase}
+.sec-head h2{font-family:var(--zh-serif);font-weight:900;font-size:clamp(1.35rem,3.6vw,1.85rem);letter-spacing:.08em;margin-top:6px}
+.sec-head p{color:var(--muted);font-size:.92rem;margin-top:8px}
+.card{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:22px;border:1px solid var(--line)}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:720px){.grid-2{grid-template-columns:1fr}}
+.point{display:flex;gap:14px;align-items:flex-start}
+.point .ico{flex:none;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;background:var(--icoBg);border:1px solid var(--icoBd)}
+.point h3{font-size:1rem;font-weight:700}
+.point p{font-size:.9rem;color:var(--muted);margin-top:2px}
+.route{display:grid;grid-template-columns:repeat(var(--legs,2),1fr);gap:14px}
+@media (max-width:720px){.route{grid-template-columns:1fr}}
+.leg{border-radius:16px;padding:20px 18px;color:#fff}
+.leg .en{font-family:var(--en);letter-spacing:.22em;font-size:.72rem;text-transform:uppercase;opacity:.85}
+.leg h3{font-family:var(--zh-serif);font-weight:700;font-size:1.2rem;margin-top:4px}
+.leg .nights{margin-top:8px;font-size:.86rem;background:rgba(255,255,255,.16);display:inline-block;border-radius:999px;padding:3px 12px}
+.leg ul{margin-top:12px;list-style:none;font-size:.86rem;line-height:1.9}
+.leg li::before{content:"✦";margin-right:8px;font-size:.7rem;opacity:.8}
+.route-tail{margin-top:14px;text-align:center;color:var(--muted);font-size:.9rem}
+.info-card h3{font-family:var(--zh-serif);font-size:1.06rem;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.info-card ul{list-style:none;font-size:.92rem}
+.info-card li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:9px}
+.info-card li:last-child{border-bottom:none}
+.info-card li::before{content:"·";color:var(--accent);font-weight:900;font-size:1.2rem;line-height:1.4}
+.tip{margin-top:12px;background:var(--tipBg);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;font-size:.88rem;color:var(--tipTx)}
+.daynav{position:sticky;top:0;z-index:50;background:var(--navBg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0}
+.daynav .rail{display:flex;gap:8px;overflow-x:auto;padding:2px 18px;scrollbar-width:none}
+.daynav .rail::-webkit-scrollbar{display:none}
+.chip{flex:none;border:none;cursor:pointer;font-family:var(--zh);font-size:.83rem;font-weight:700;padding:7px 14px;border-radius:999px;background:#fff;border:1.5px solid var(--line);color:var(--muted);transition:.18s}
+.chip small{display:block;font-weight:500;font-size:.68rem}
+.chip.c-a.active,.chip.c-a:hover{background:var(--cityA);border-color:var(--cityA);color:#fff}
+.chip.c-b.active,.chip.c-b:hover{background:var(--cityB);border-color:var(--cityB);color:#fff}
+.chip.c-c.active,.chip.c-c:hover{background:var(--cityC);border-color:var(--cityC);color:#fff}
+.chip.c-end.active,.chip.c-end:hover{background:var(--heroDark);border-color:var(--heroDark);color:#fff}
+.day{background:#fff;border-radius:16px;box-shadow:var(--shadow);border:1px solid var(--line);margin-bottom:24px;overflow:hidden;scroll-margin-top:86px}
+.day-head{padding:16px 22px;color:#fff;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.day-head.a{background:var(--gradA)}
+.day-head.b{background:var(--gradB)}
+.day-head.c{background:var(--gradC)}
+.day-head.end{background:var(--gradEnd)}
+.day-head .dnum{font-family:var(--en);font-weight:700;letter-spacing:.16em}
+.day-head h3{font-family:var(--zh-serif);font-weight:700;font-size:1.12rem}
+.day-head .base{margin-left:auto;font-size:.8rem;background:rgba(255,255,255,.18);border-radius:999px;padding:3px 12px}
+.day-body{padding:6px 22px 18px}
+.tl{list-style:none}
+.tl li{padding:12px 0;border-bottom:1px dashed var(--line)}
+.tl li:last-child{border-bottom:none}
+.tl .what{font-weight:700;font-size:.97rem}
+.tl .mom{margin-top:4px;font-size:.85rem;color:var(--momTx);background:var(--momBg);border-radius:8px;padding:6px 10px;display:inline-block}
+.tl .mom::before{content:"👵 "}
+.day-note{margin:4px 22px 18px;background:var(--noteBg);border-radius:10px;padding:11px 15px;font-size:.87rem;color:var(--muted)}
+.day-note b{color:var(--ink)}
+.opt-tabs{display:flex;gap:8px;flex-wrap:wrap;padding:14px 22px 0}
+.opt-tab{cursor:pointer;font-family:var(--zh);border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 16px;font-weight:700;font-size:.86rem;color:var(--muted);transition:.18s}
+.opt-tab.active{background:var(--cityB);border-color:var(--cityB);color:#fff}
+.opt-panel{display:none}
+.opt-panel.active{display:block}
+
+/* ===== 經典景點圖卡 ===== */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.gallery{grid-template-columns:1fr}}
+.gcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s}
+.gcard:hover{transform:translateY(-3px)}
+.gcard .ph{position:relative;aspect-ratio:4/3;background:var(--heroBg);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gcard .ph img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .5s}
+.gcard .ph img.on{opacity:1}
+.gcard .ph.loaded .fallback{display:none}
+.gcard .ph .fallback{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;color:#EDE6D2;font-size:.85rem;letter-spacing:.08em}
+.gcard .ph .fallback span{font-size:2.2rem}
+.gcard .ph .daytag{position:absolute;left:10px;top:10px;z-index:2;font-size:.72rem;font-weight:700;color:#fff;border-radius:999px;padding:3px 11px;background:var(--cityA);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.gcard .ph .daytag.b{background:var(--cityB)}
+.gcard .ph .daytag.c{background:var(--cityC)}
+.gcard .tx{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.gcard h3{font-family:var(--zh-serif);font-weight:700;font-size:1.02rem}
+.gcard .en-name{font-family:var(--en);font-size:.8rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase}
+.gcard p{font-size:.85rem;color:var(--muted);line-height:1.7;margin-top:4px}
+.gcard .credit{margin-top:auto;padding-top:8px;font-size:.68rem;color:#B4AC9A}
+/* ===== 航班價格帶 ===== */
+.fly-band{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.fly-band span{font-size:.82rem;border-radius:999px;padding:4px 13px;border:1px solid var(--line);background:var(--noteBg);color:var(--muted)}
+.fly-band b{color:var(--ink)}
+@media (min-width:760px){.daynav .rail{justify-content:safe center}}
+footer{margin-top:56px;background:var(--heroDark);color:#C9C3B2;text-align:center;padding:32px 18px 42px;font-size:.85rem;line-height:2}
+footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--accentSoft);font-size:.8rem;text-transform:uppercase}
+
+</style>
+</head>
+<body>
+<a class="home-link" href="index.html">⌂ 三方案入口</a>
+<header class="hero">
+<div class="deco" id="deco" data-glyph="♛"></div>
+<div class="eyebrow">Bohemia and Imperial Vienna</div>
+<h1>捷克＋奧地利 11 天 9 夜</h1>
+<div class="sub">媽媽同行版｜童話古城 × 皇宮 × 聖誕市集</div>
+<div class="season">建議季節｜12 月上旬至中旬</div>
+<div class="hero-badges"><span>🏰 <b>4 晚</b> 布拉格</span><span>🎻 <b>5 晚</b> 維也納</span><span>🧳 換飯店只有 <b>1 次</b></span><span>🚄 城市間 Railjet 直達</span></div>
+</header>
+<main class="wrap">
+<section id="concept"><div class="sec-head"><div class="en">Why This Trip</div><h2>方案特色</h2></div>
+<div class="grid grid-2"><div class="card point"><div class="ico">🎄</div><div><h3>聖誕氣氛最濃</h3><p>布拉格舊城廣場與維也納皇宮市集，是歐洲聖誕市集的代表作。</p></div></div>
+<div class="card point"><div class="ico">🧳</div><div><h3>全程只換一次飯店</h3><p>4＋5 晚雙城配置，是三個方案中搬行李最少的。</p></div></div>
+<div class="card point"><div class="ico">☕</div><div><h3>咖啡館文化</h3><p>維也納咖啡館文化是無形文化遺產，走累就坐下，最適合慢旅行。</p></div></div>
+<div class="card point"><div class="ico">👵</div><div><h3>長輩友善度最高</h3><p>景點集中、地鐵電車便利、坡道可用纜車與計程車化解。</p></div></div></div></section>
+<section id="route"><div class="sec-head"><div class="en">Route Overview</div><h2>路線總覽</h2></div>
+<div class="route" style="--legs:2"><div class="leg" style="background:linear-gradient(150deg,#6E222C,#8C2F39)">
+<div class="en">Prague</div><h3>布拉格</h3><div class="nights">Day 1–4・第 1–4 晚</div>
+<ul><li>舊城廣場・天文鐘</li><li>查理大橋・小城區</li><li>布拉格城堡・黃金巷</li></ul></div>
+<div class="leg" style="background:linear-gradient(150deg,#96701F,#B58A2E)">
+<div class="en">Vienna</div><h3>維也納</h3><div class="nights">Day 5–9・第 5–9 晚</div>
+<ul><li>美泉宮・霍夫堡</li><li>史蒂芬大教堂</li><li>中央咖啡館・聖誕市集</li></ul></div></div>
+<p class="route-tail">Day 10 維也納搭機 → Day 11 抵達台灣 ✈️（台北無直飛布拉格／維也納，去回各轉機一次）</p></section>
+<section id="highlights"><div class="sec-head"><div class="en">Trip Highlights</div><h2>經典景點圖卡</h2><p>照片載入自維基百科各景點條目首圖（開放授權）；離線或預覽環境會顯示色卡</p></div><div class="gallery" id="gallery"></div></section>
+<section id="notes0"><div class="sec-head"><div class="en">Good to Know</div><h2>行前重點</h2></div>
+<div class="grid grid-2"><div class="card info-card"><h3>🚄 交通核心</h3><ul>
+<li>布拉格 → 維也納：Railjet 直達約 4 小時，二等艙即舒適，建議劃位。</li>
+<li>布拉格舊城步行為主；上城堡建議搭電車或計程車上山、步行下山。</li>
+<li>維也納地鐵＋電車密集，環城大道景點串聯容易。</li>
+<li>兩城計程車／Bolt 叫車方便，累了就搭，不硬走。</li></ul>
+<div class="tip">💡 12 月中歐約 16:00–16:30 天黑，戶外景點排在上午與正午，晚上留給市集。</div></div>
+<div class="card info-card"><h3>🧣 天氣與提醒</h3><ul>
+<li>12 月白天約 0–5°C，比荷比法更冷，防風保暖要再升一級。</li>
+<li>布拉格石板路與坡道多，防水止滑鞋必備。</li>
+<li>聖誕市集人潮密集，背包放身前；熱紅酒杯多為押金制。</li>
+<li>博物館週一休館者多，行前核對。</li></ul>
+<div class="tip">⚠️ 查理大橋與城堡區清晨人最少；帶媽媽避開上午 10 點後的旅行團尖峰。</div></div></div></section>
+<section id="flights"><div class="sec-head"><div class="en">Flights and Fares</div><h2>航班與價格帶</h2><p>價格為規劃用概估區間，依日期與艙位浮動；12 月為旺季</p></div><div class="grid grid-2"><div class="card info-card"><h3>✈️ 台北直飛選擇</h3><ul>
+<li>布拉格：華航 CI067／068 直飛（A350，每週最多四班）；星宇航空亦有直飛班次。</li>
+<li>維也納：華航與長榮皆有直飛（約 13 小時）。</li>
+<li>可考慮「布拉格進、維也納出」開口票，行程不走回頭路。</li>
+<li>去程紅眼班（約 23:20 起飛、清晨抵達）落地後記得排輕鬆的 Day 1。</li></ul>
+<div class="tip">💡 兩城都有直飛是這個方案的大優勢——長輩免轉機、行李直達。</div></div>
+<div class="card info-card"><h3>💰 直飛 vs 轉機價格帶（經濟艙來回／人）</h3><ul>
+<li>直飛概估：促銷約 NT$29,000–33,000 起，一般約 NT$38,000–48,000；12 月聖誕檔期偏上緣。</li>
+<li>轉機概估：中東／東南亞轉一次約 NT$22,000–32,000；廉航（如酷航）約 NT$16,000–20,000，但行李餐食另計、轉機久。</li>
+<li>價差約 NT$8,000–18,000／人；換到的是省 4–8 小時與免搬行李。</li></ul>
+<div class="fly-band"><span>直飛 <b>NT$29k–48k</b></span><span>傳統轉機 <b>NT$22k–32k</b></span><span>廉航轉機 <b>NT$16k–20k</b></span></div>
+<div class="tip">👵 媽媽同行結論：直飛的價差花得值得，13 小時一趟到、免拖行李換航廈。</div></div></div></section>
+</main>
+<nav class="daynav" aria-label="每日行程導覽"><div class="rail" id="dayRail"></div></nav>
+<main class="wrap">
+<section id="days" style="padding-top:34px">
+<div class="sec-head"><div class="en">Day by Day</div><h2>每日行程（提案骨架）</h2><p>點上方日期快速跳轉｜👵 為媽媽同行提醒</p></div>
+<article class="day" id="d1">
+<div class="day-head a"><span class="dnum">DAY 1</span><h3>台灣 ✈ 布拉格</h3><span class="base">🏨 布拉格 第 1 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">轉機抵達布拉格、入住</div><div class="mom">轉機航段選同一聯盟、行李直掛</div></li>
+<li><div class="what">超市採買與附近散步</div><div class="mom">抵達日不排景點，早點休息</div></li>
+</ul></div></article>
+<article class="day" id="d2">
+<div class="day-head a"><span class="dnum">DAY 2</span><h3>布拉格舊城初見</h3><span class="base">🏨 布拉格 第 2 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">舊城廣場、天文鐘整點報時</div><div class="mom">人潮多，貴重物放身前</div></li>
+<li><div class="what">火藥塔、采萊特納街散步</div><div class="mom">石板路慢走</div></li>
+<li><div class="what">舊城聖誕市集（廣場主市集）</div><div class="mom">傍晚點燈後最美，逛累就回飯店</div></li>
+</ul></div><div class="day-note"><b>備註</b>｜舊城區平坦集中，是暖身的一天。</div></article>
+<article class="day" id="d3">
+<div class="day-head a"><span class="dnum">DAY 3</span><h3>查理大橋＋小城區</h3><span class="base">🏨 布拉格 第 3 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">清晨查理大橋</div><div class="mom">越早越安靜，拍照先停下再拍</div></li>
+<li><div class="what">小城區、聖尼古拉教堂</div><div class="mom">巷弄坡度輕微，慢慢走</div></li>
+<li><div class="what">河畔午餐與咖啡館</div><div class="mom">安排完整 60–90 分鐘休息</div></li>
+<li><div class="what">小城區聖誕市集</div><div class="mom">視體力，累了搭電車回飯店</div></li>
+</ul></div></article>
+<article class="day" id="d4">
+<div class="day-head a"><span class="dnum">DAY 4</span><h3>布拉格城堡＋黃金巷</h3><span class="base">🏨 布拉格 第 4 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">電車或計程車上城堡區</div><div class="mom">上坡交給車輪，下坡才用雙腳</div></li>
+<li><div class="what">聖維特大教堂、舊皇宮</div><div class="mom">城堡區內距離長，挑重點看</div></li>
+<li><div class="what">黃金巷</div><div class="mom">小巧好逛，卡夫卡故居在 22 號</div></li>
+<li><div class="what">步行下山＋咖啡館收尾</div><div class="mom">整理隔日移動行李</div></li>
+</ul></div><div class="day-note"><b>備註</b>｜城堡安檢有排隊；上午前往人較少。</div></article>
+<article class="day" id="d5">
+<div class="day-head b"><span class="dnum">DAY 5</span><h3>Railjet → 維也納</h3><span class="base">🏨 維也納 第 5 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">退房、布拉格總站搭 Railjet（約 4 小時）</div><div class="mom">大件行李放置區離座位遠，貴重物隨身</div></li>
+<li><div class="what">抵達維也納、入住</div><div class="mom">住宿選環城大道內或近地鐵站</div></li>
+<li><div class="what">市區散步：格拉本大街、克恩滕大街</div><div class="mom">平坦好走，順看聖誕燈飾</div></li>
+<li><div class="what">市政廳聖誕市集初訪</div><div class="mom">維也納最大市集，傍晚點燈</div></li>
+</ul></div><div class="day-note"><b>備註</b>｜移動日下午只排市中心散步。</div></article>
+<article class="day" id="d6">
+<div class="day-head b"><span class="dnum">DAY 6</span><h3>美泉宮＋宮前聖誕市集</h3><span class="base">🏨 維也納 第 6 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">美泉宮（預約時段票）</div><div class="mom">挑精華路線，控制在 1.5 小時內</div></li>
+<li><div class="what">宮內咖啡館或橘園午餐</div><div class="mom">完整休息</div></li>
+<li><div class="what">美泉宮前聖誕市集</div><div class="mom">就在宮殿正前方，氣氛一流</div></li>
+<li><div class="what">回市區休息</div><div class="mom">花園很大，冬季不必走完</div></li>
+</ul></div></article>
+<article class="day" id="d7">
+<div class="day-head b"><span class="dnum">DAY 7</span><h3>霍夫堡＋大教堂＋咖啡館</h3><span class="base">🏨 維也納 第 7 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">霍夫堡皇宮區與英雄廣場</div></li>
+<li><div class="what">史蒂芬大教堂</div><div class="mom">不安排登塔</div></li>
+<li><div class="what">中央咖啡館 Café Central</div><div class="mom">經典維也納咖啡館，值得排一次</div></li>
+<li><div class="what">自由逛街或回飯店午休</div><div class="mom">晚上視體力逛市集</div></li>
+</ul></div><div class="day-note"><b>備註</b>｜中央咖啡館用餐時段常排隊，避開正午或先訂位。</div></article>
+<article class="day" id="d8">
+<div class="day-head b"><span class="dnum">DAY 8</span><h3>彈性日・依體力二選一</h3><span class="base">🏨 維也納 第 8 晚</span></div>
+<div class="opt-tabs" data-day="d8">
+<button class="opt-tab" data-panel="d8a">A 案｜薩爾斯堡一日</button>
+<button class="opt-tab active" data-panel="d8b">B 案｜維也納慢旅行（推薦）</button></div>
+<div class="opt-panel" id="d8a"><div class="day-body"><ul class="tl">
+<li><div class="what">Railjet 往返薩爾斯堡（單程約 2.5 小時）</div><div class="mom">來回車程長，體力佳才選</div></li>
+<li><div class="what">舊城、糧食胡同、莫札特出生地</div><div class="mom">要塞可搭纜車上山看景</div></li>
+</ul></div><div class="day-note">⚠️ 冬季日短，去程搭早班車；當天往返對長輩偏累。</div></div>
+<div class="opt-panel active" id="d8b"><div class="day-body"><ul class="tl">
+<li><div class="what">美景宮（克林姆《吻》）或藝術史博物館</div><div class="mom">二選一即可，博物館內有咖啡座</div></li>
+<li><div class="what">納許市場或百貨閒逛</div></li>
+<li><div class="what">咖啡館下午茶＋薩赫蛋糕</div><div class="mom">16:00 前回飯店休息</div></li>
+</ul></div></div></article>
+<article class="day" id="d9">
+<div class="day-head b"><span class="dnum">DAY 9</span><h3>維也納留白日</h3><span class="base">🏨 維也納 第 9 晚</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">自由活動：補逛市集或咖啡館</div><div class="mom">不安排長距離景點</div></li>
+<li><div class="what">伴手禮採買（莫札特巧克力、Manner 威化）</div></li>
+<li><div class="what">整理行李、確認退稅單據</div><div class="mom">退稅單不放托運箱</div></li>
+<li><div class="what">旅程最後一餐</div><div class="mom">可預約一間維也納老字號</div></li>
+</ul></div></article>
+<article class="day" id="d10">
+<div class="day-head end"><span class="dnum">DAY 10</span><h3>維也納 ✈ 台灣</h3><span class="base">📍 機場 → 機上</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">起飛前 3.5–4 小時前往機場</div><div class="mom">CAT 機場快線或預約接送</div></li>
+<li><div class="what">退稅、托運、安檢</div><div class="mom">藥品與保暖衣物放隨身</div></li>
+<li><div class="what">飛行途中定時起身補水</div></li>
+</ul></div></article>
+<article class="day" id="d11">
+<div class="day-head end"><span class="dnum">DAY 11</span><h3>抵達台灣・返家休息</h3><span class="base">📍 台灣</span></div>
+<div class="day-body"><ul class="tl">
+<li><div class="what">入境、返家</div><div class="mom">清淡飲食，依睡眠逐步調時差</div></li>
+</ul></div></article>
+</section>
+</main>
+<footer>
+<div class="en">Bohemia and Imperial Vienna</div>
+<p>捷克＋奧地利 11 天 9 夜慢旅行｜媽媽同行版・提案骨架</p>
+<p style="opacity:.7">選定方案後，再展開成完整版（時刻、訂票、清單與預算）</p>
+</footer>
+<script type="application/json" id="dayData">[{"id": "d1", "n": 1, "t": "抵達", "c": "a"}, {"id": "d2", "n": 2, "t": "舊城", "c": "a"}, {"id": "d3", "n": 3, "t": "查理大橋", "c": "a"}, {"id": "d4", "n": 4, "t": "城堡", "c": "a"}, {"id": "d5", "n": 5, "t": "→維也納", "c": "b"}, {"id": "d6", "n": 6, "t": "美泉宮", "c": "b"}, {"id": "d7", "n": 7, "t": "霍夫堡", "c": "b"}, {"id": "d8", "n": 8, "t": "二選一", "c": "b"}, {"id": "d9", "n": 9, "t": "留白日", "c": "b"}, {"id": "d10", "n": 10, "t": "返程", "c": "end"}, {"id": "d11", "n": 11, "t": "抵台", "c": "end"}]</script>
+<script>
+(function(){
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var deco=document.getElementById('deco');
+  if(deco){for(var j=0;j<22;j++){var d=document.createElement('i');d.textContent=deco.getAttribute('data-glyph')||'*';
+    d.style.left=(2+Math.random()*96)+'%';d.style.top=(6+Math.random()*80)+'%';
+    d.style.fontSize=(7+Math.random()*8)+'px';d.style.animationDelay=(Math.random()*3.6)+'s';deco.appendChild(d);}}
+  var rail=document.getElementById('dayRail');
+  var days=JSON.parse(document.getElementById('dayData').textContent);
+  days.forEach(function(dd){
+    var b=document.createElement('button');
+    b.className='chip c-'+dd.c;
+    b.innerHTML='D'+dd.n+'<small>'+dd.t+'</small>';
+    b.addEventListener('click',function(){document.getElementById(dd.id).scrollIntoView({behavior:reduced?'auto':'smooth'})});
+    rail.appendChild(b);
+  });
+  if('IntersectionObserver' in window){
+    var chips=rail.children;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          var idx=days.findIndex(function(dd){return dd.id===e.target.id});
+          for(var k=0;k<chips.length;k++)chips[k].classList.toggle('active',k===idx);
+          var c=chips[idx];if(c&&c.scrollIntoView)c.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+        }
+      });
+    },{rootMargin:'-35% 0px -55% 0px'});
+    days.forEach(function(dd){io.observe(document.getElementById(dd.id))});
+  }
+  document.querySelectorAll('.opt-tabs').forEach(function(tabs){
+    var art=tabs.closest('.day');
+    tabs.querySelectorAll('.opt-tab').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        tabs.querySelectorAll('.opt-tab').forEach(function(x){x.classList.remove('active')});
+        btn.classList.add('active');
+        art.querySelectorAll('.opt-panel').forEach(function(p){p.classList.toggle('active',p.id===btn.getAttribute('data-panel'))});
+      });
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var spots=[{"zh": "布拉格天文鐘", "en": "Astronomical Clock", "wiki": "Prague_astronomical_clock", "day": "Day 2", "c": "a", "emoji": "🕰️", "txt": "運轉六百年的中世紀天文鐘，整點使徒木偶報時；站在舊城廣場抬頭看就好，位置絕佳。"}, {"zh": "查理大橋", "en": "Charles Bridge", "wiki": "Charles_Bridge", "day": "Day 3", "c": "a", "emoji": "🌉", "txt": "三十座聖像守護的哥德石橋，清晨薄霧中最有童話感——我們就是為了這一刻早起。"}, {"zh": "布拉格城堡", "en": "Prague Castle", "wiki": "Prague_Castle", "day": "Day 4", "c": "a", "emoji": "🏰", "txt": "世界最大古城堡群，聖維特大教堂的彩窗必看；上坡搭車、下坡步行的省力路線。"}, {"zh": "黃金巷", "en": "Golden Lane", "wiki": "Golden_Lane", "day": "Day 4", "c": "a", "emoji": "🎨", "txt": "城堡牆邊的彩色小屋巷弄，卡夫卡曾住在 22 號；小巧精緻，走一圈不費力。"}, {"zh": "美泉宮", "en": "Schönbrunn Palace", "wiki": "Schönbrunn_Palace", "day": "Day 6", "c": "b", "emoji": "👑", "txt": "哈布斯堡王朝的夏宮、茜茜公主的家；12 月宮殿正前方就是最經典的聖誕市集。"}, {"zh": "史蒂芬大教堂", "en": "St. Stephen’s Cathedral", "wiki": "Stephansdom", "day": "Day 7", "c": "b", "emoji": "⛪", "txt": "維也納的心臟，馬賽克琉璃瓦屋頂是城市象徵；在廣場邊仰望即可，不安排登塔。"}, {"zh": "霍夫堡皇宮", "en": "Hofburg", "wiki": "Hofburg", "day": "Day 7", "c": "b", "emoji": "🏛️", "txt": "哈布斯堡王朝六百年的權力中心，英雄廣場氣勢恢弘；外觀與廣場就足夠震撼。"}, {"zh": "中央咖啡館", "en": "Café Central", "wiki": "Café_Central", "day": "Day 7", "c": "b", "emoji": "☕", "txt": "1876 年開業的維也納咖啡館代表作，拱頂下喝一杯米朗琪——這就是慢旅行的核心行程。"}];
+  var gal=document.getElementById('gallery');
+  if(!gal)return;
+  var refMap={};
+  spots.forEach(function(s){
+    var card=document.createElement('article');
+    card.className='gcard';
+    card.innerHTML=
+      '<div class="ph"><span class="daytag '+s.c+'">'+s.day+'</span>'+
+      '<div class="fallback"><span>'+s.emoji+'</span>'+s.en+'</div>'+
+      '<img alt="'+s.zh+'" loading="lazy"></div>'+
+      '<div class="tx"><div class="en-name">'+s.en+'</div><h3>'+s.zh+'</h3><p>'+s.txt+'</p>'+
+      '<div class="credit">照片：Wikipedia／Wikimedia Commons</div></div>';
+    gal.appendChild(card);
+    refMap[s.wiki.replace(/_/g,' ')]={img:card.querySelector('img'),ph:card.querySelector('.ph'),wiki:s.wiki};
+  });
+  function setImg(ref,src){
+    if(!ref||!src||ref.img.getAttribute('src'))return;
+    ref.img.onload=function(){ref.img.classList.add('on');ref.ph.classList.add('loaded')};
+    ref.img.src=src;
+  }
+  var titles=spots.map(function(s){return s.wiki}).join('|');
+  var api='https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*'+
+          '&prop=pageimages&piprop=thumbnail&pithumbsize=720&redirects=1&titles='+encodeURIComponent(titles);
+  fetch(api).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
+    var pages=(j.query&&j.query.pages)||{};
+    var norm={};
+    ((j.query&&j.query.normalized)||[]).forEach(function(n){norm[n.to]=n.from});
+    ((j.query&&j.query.redirects)||[]).forEach(function(n){norm[n.to]=norm[n.from]||n.from});
+    Object.keys(pages).forEach(function(pid){
+      var p=pages[pid];
+      var key=(norm[p.title]||p.title).replace(/_/g,' ');
+      var ref=refMap[key]||refMap[p.title];
+      if(p.thumbnail)setImg(ref,p.thumbnail.source);
+    });
+    Object.keys(refMap).forEach(function(k){
+      var ref=refMap[k];
+      if(!ref.img.getAttribute('src')){
+        fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+ref.wiki)
+          .then(function(r){return r.ok?r.json():Promise.reject()})
+          .then(function(x){if(x.thumbnail)setImg(ref,x.thumbnail.source.replace(/\/(\d+)px-/,'/720px-'))})
+          .catch(function(){});
+      }
+    });
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>
