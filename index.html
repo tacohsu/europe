@@ -105,6 +105,33 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 .claude-view .cv-head{font-family:var(--zh-serif);font-weight:900;font-size:1.05rem;letter-spacing:.06em;margin-bottom:10px}
 .claude-view p{font-size:.9rem;color:var(--muted);margin-top:10px;line-height:1.85}
 .claude-view p b{color:var(--ink)}
+
+.sec-head .lg{display:inline-block;margin-top:6px;font-size:.85rem}
+.sec-head .lg b{color:var(--ink);font-family:var(--en);font-size:1rem}
+td b.s,td b.m,td b.w{font-family:var(--en);font-size:1.15rem;display:block}
+td b.s{color:#2E7D6E}
+td b.m{color:#B58A2E}
+td b.w{color:#A9636B}
+td small{display:block;font-size:.74rem;color:var(--muted);line-height:1.5;margin-top:2px}
+.wx{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:860px){.wx{grid-template-columns:1fr}}
+.wx-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}
+.wx-card.cz{border-top-color:var(--cz2)}
+.wx-card.nz{border-top-color:var(--nz2)}
+.wx-card.fr{border-top-color:var(--fr2)}
+.wx-top{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.wx-emo{font-size:2rem;line-height:1}
+.wx-card h3{font-family:var(--zh-serif);font-weight:900;font-size:1.05rem;letter-spacing:.04em}
+.wx-t{font-size:.82rem;color:var(--muted);margin-top:2px}
+.wx-card ul{list-style:none;font-size:.86rem}
+.wx-card li{padding:6px 0;border-bottom:1px dashed var(--line);color:var(--muted);line-height:1.7}
+.wx-card li:last-child{border-bottom:none}
+.wx-card li::before{content:"·";color:var(--gold);font-weight:900;font-size:1.1rem;margin-right:7px}
+.wx-q{margin-top:12px;background:#FBF5E6;border-radius:9px;padding:9px 12px;font-size:.84rem;color:#7A5E22;font-weight:700}
+.gcase .qn{font-family:var(--en);font-weight:700;font-size:.95rem;color:var(--gold);letter-spacing:.18em}
+.gcase .if2{font-family:var(--zh-serif);font-weight:900;font-size:1.02rem;letter-spacing:.03em;margin-top:6px;line-height:1.6}
+.gcase .if2 b{color:var(--fr2)}
+.gcase p{font-size:.85rem;color:var(--muted);margin-top:9px;line-height:1.75}
 </style>
 </head>
 <body>
@@ -123,45 +150,45 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <div class="plans">
   <a class="plan cz" href="cz-at.html">
     <div class="top">
-      <div class="meta"><span class="flag">🇨🇿🇦🇹</span><span class="rank first">👑 綜合首選 92 分</span></div>
+      <div class="meta"><span class="flag">🇨🇿🇦🇹</span><span class="rank">最穩定</span></div>
       <div class="tt"><div class="en-t">Czechia + Austria</div>
       <h3>捷克＋奧地利</h3>
       <div class="theme">童話古城 × 皇宮 × 聖誕市集</div></div>
     </div>
     <div class="body">
       <div class="feat"><span>🏰 城堡</span><span>👑 皇宮</span><span>☕ 咖啡館</span><span>🎄 聖誕市集</span><span>🧳 只換 1 次飯店</span></div>
-      <div class="fit"><b>最突出：</b>聖誕氣氛、交通簡單、節奏最好控制。布拉格—維也納 Railjet 直達約 4 小時，媽媽累了行程最容易調整。</div>
-      <div class="score"><b>92</b><small>/100・加權總分</small></div>
+      <div class="fit"><b>贏在：</b>全程只換一次飯店、只處理一次跨國移動。媽媽累了刪掉一個宮殿，改成咖啡館或提早回飯店，整天不會垮。</div>
+      <div class="fit" style="border-color:#B58A2E"><b>代價：</b>12 月白天 0–5°C，是三案中最冷的；石板路多。</div>
       <span class="go">查看完整行程 →</span>
     </div>
   </a>
 
   <a class="plan nz" href="nz.html">
     <div class="top">
-      <div class="meta"><span class="flag">🇳🇿</span><span class="rank">🥈 第 2 名 90 分</span></div>
+      <div class="meta"><span class="flag">🇳🇿</span><span class="rank">最豐富</span></div>
       <div class="tt"><div class="en-t">New Zealand · North + South</div>
       <h3>紐西蘭北＋南島</h3>
       <div class="theme">哈比村 × 地熱 × 湖泊 × 星空</div></div>
     </div>
     <div class="body">
       <div class="feat"><span>🚪 哈比村</span><span>♨️ 地熱溫泉</span><span>🗻 庫克山</span><span>🌌 星空</span><span>☀️ 南半球夏天</span></div>
-      <div class="fit"><b>最突出：</b>景觀最多元、12 月氣候舒服、旅行記憶最豐富。北島 4 天＋南島 5 天一路往南；代價是兩段國內線與 4 次換宿。</div>
-      <div class="score"><b>90</b><small>/100・加權總分</small></div>
+      <div class="fit"><b>贏在：</b>12 月是當地夏天，白天約 20°C、不必穿厚重大衣。哈比村、毛利文化、地熱、湖泊、雪山一次收齊。</div>
+      <div class="fit" style="border-color:#2E7D6E"><b>代價：</b>四段飛行＋4 次換宿，單日拉車 2–4 小時是常態。</div>
       <span class="go">查看完整行程 →</span>
     </div>
   </a>
 
   <a class="plan fr" href="nl-be-fr.html">
     <div class="top">
-      <div class="meta"><span class="flag">🇳🇱🇧🇪🇫🇷</span><span class="rank">🥉 第 3 名 87 分</span></div>
+      <div class="meta"><span class="flag">🇳🇱🇧🇪🇫🇷</span><span class="rank">最經典</span></div>
       <div class="tt"><div class="en-t">Netherlands · Belgium · France</div>
       <h3>荷比法</h3>
       <div class="theme">運河 × 古城 × 巴黎 × 聖誕節</div></div>
     </div>
     <div class="body">
-      <div class="feat"><span>🗼 巴黎鐵塔</span><span>🖼 羅浮宮</span><span>🚤 羊角村</span><span>🏰 布魯日</span><span>🛍 購物最強</span></div>
-      <div class="fit"><b>最突出：</b>經典地標最多、第一次歐洲代表性最強。若媽媽把「去歐洲」直接聯想到巴黎鐵塔，另外兩案很難取代它。</div>
-      <div class="score"><b>87</b><small>/100・加權總分</small></div>
+      <div class="feat"><span>🗼 巴黎鐵塔</span><span>🖼 羅浮宮</span><span>🚤 羊角村</span><span>🏰 布魯日</span><span>🥬 素食最友善</span></div>
+      <div class="fit"><b>贏在：</b>經典地標密度最高。若媽媽把「去歐洲」直接聯想到巴黎鐵塔，另外兩案很難取代；蔬食與購物選擇也最多。</div>
+      <div class="fit" style="border-color:#8C2F39"><b>代價：</b>換城市與一日往返最多；巴黎行程容易貪心塞太滿。</div>
       <span class="go">查看完整行程 →</span>
     </div>
   </a>
@@ -170,56 +197,130 @@ footer .en{font-family:var(--en);letter-spacing:.35em;color:var(--gold-soft);fon
 <!-- 比較表 -->
 <section id="compare">
   <div class="sec-head">
-    <div class="en">Weighted Scoring</div>
-    <h2>綜合評分表</h2>
-    <p>統一條件：12 月出發・11 天 9 夜・媽媽同行・自由行與舒適度優先<br>依旅行條件所做的規劃評估，不是客觀景點排名</p>
+    <div class="en">Side by Side</div>
+    <h2>三方案對照</h2>
+    <p>統一條件：12 月出發・11 天 9 夜・媽媽同行（蛋奶素忌蔥蒜）・自由行與舒適度優先<br>
+    <span class="lg"><b>◎</b> 明顯強項　<b>○</b> 表現均衡　<b>△</b> 需要留意</span></p>
   </div>
   <div class="tbl-wrap">
     <table>
-      <thead><tr><th>評比項目</th><th>權重</th><th>🇨🇿🇦🇹 捷克奧地利</th><th>🇳🇿 紐西蘭北＋南島</th><th>🇳🇱🇧🇪🇫🇷 荷比法</th></tr></thead>
+      <thead><tr><th>比較維度</th><th>🇨🇿🇦🇹 捷克奧地利</th><th>🇳🇿 紐西蘭北＋南島</th><th>🇳🇱🇧🇪🇫🇷 荷比法</th></tr></thead>
       <tbody>
-        <tr><td>媽媽同行舒適度</td><td>20%</td><td class="score-cell">9.5</td><td>8.3</td><td>8.2</td></tr>
-        <tr><td>交通與行程難度</td><td>15%</td><td class="score-cell">9.5</td><td>7.5</td><td>8.5</td></tr>
-        <tr><td>12 月季節特色</td><td>15%</td><td class="score-cell">10</td><td>9.5</td><td>8.5</td></tr>
-        <tr><td>景點與體驗豐富度</td><td>15%</td><td>8.8</td><td class="score-cell">10</td><td>9.5</td></tr>
-        <tr><td>旅行節奏</td><td>10%</td><td class="score-cell">9.5</td><td>7.8</td><td>8.0</td></tr>
-        <tr><td>經典與驚艷程度</td><td>10%</td><td>9.0</td><td class="score-cell">10</td><td>9.8</td></tr>
-        <tr><td>飲食、購物、休息便利</td><td>10%</td><td>9.0</td><td>8.0</td><td class="score-cell">9.3</td></tr>
-        <tr><td>天候風險與備案</td><td>5%</td><td>7.8</td><td class="score-cell">8.0</td><td>7.5</td></tr>
-        <tr class="hl"><td>加權總分</td><td>100%</td><td class="score-cell">92 👑</td><td class="score-cell">90</td><td class="score-cell">87</td></tr>
+        <tr><td>12 月天氣體感</td>
+          <td><b class="w">△</b><small>白天 0–5°C，最冷</small></td>
+          <td><b class="s">◎</b><small>當地夏天，約 20°C</small></td>
+          <td><b class="m">○</b><small>白天 3–8°C，濕冷有風</small></td></tr>
+        <tr><td>天候風險與備案</td>
+          <td><b class="m">○</b><small>市集、咖啡館、博物館都在室內</small></td>
+          <td><b class="m">○</b><small>晴天絕美，遇雨山景全失</small></td>
+          <td><b class="m">○</b><small>室內備案最多，但風雨降低體驗</small></td></tr>
+        <tr><td>搬行李與換宿</td>
+          <td><b class="s">◎</b><small>只換 1 次，跨國移動 1 次</small></td>
+          <td><b class="w">△</b><small>換 4 次，含 2 段國內線</small></td>
+          <td><b class="m">○</b><small>換 2 次，另有多次一日往返</small></td></tr>
+        <tr><td>每日行程彈性</td>
+          <td><b class="s">◎</b><small>刪一個景點不影響整天</small></td>
+          <td><b class="w">△</b><small>拉車日一旦出發就是一整天</small></td>
+          <td><b class="m">○</b><small>已設三選一與留白日</small></td></tr>
+        <tr><td>12 月季節限定感</td>
+          <td><b class="s">◎</b><small>聖誕市集規模與氣氛最強</small></td>
+          <td><b class="m">○</b><small>南半球夏日聖誕，另一種特別</small></td>
+          <td><b class="s">◎</b><small>燈節遊船＋Winter Wonders</small></td></tr>
+        <tr><td>景觀多元度</td>
+          <td><b class="m">○</b><small>城市與建築為主</small></td>
+          <td><b class="s">◎</b><small>地熱、湖泊、雪山、峽灣</small></td>
+          <td><b class="m">○</b><small>運河、古城、都會</small></td></tr>
+        <tr><td>經典地標</td>
+          <td><b class="m">○</b><small>布拉格城堡、美泉宮</small></td>
+          <td><b class="m">○</b><small>哈比村、庫克山</small></td>
+          <td><b class="s">◎</b><small>鐵塔、羅浮宮，願望清單級</small></td></tr>
+        <tr><td>蛋奶素・忌蔥蒜</td>
+          <td><b class="m">○</b><small>需查餐廳，湯底常有洋蔥</small></td>
+          <td><b class="m">○</b><small>城市易，荒野段需備糧</small></td>
+          <td><b class="s">◎</b><small>蔬食餐廳密度最高</small></td></tr>
+        <tr><td>購物與室內休息</td>
+          <td><b class="m">○</b><small>咖啡館文化極佳</small></td>
+          <td><b class="w">△</b><small>小鎮選擇有限</small></td>
+          <td><b class="s">◎</b><small>百貨、博物館、甜點最完整</small></td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+
+<!-- 天氣比較 -->
+<section id="weather">
+  <div class="sec-head">
+    <div class="en">December Weather</div>
+    <h2>12 月天氣與體感</h2>
+    <p>這是三個方案差最多的一項，也常是長輩實際感受的關鍵</p>
+  </div>
+  <div class="wx">
+    <div class="wx-card cz">
+      <div class="wx-top"><span class="wx-emo">🥶</span><div><h3>布拉格・維也納</h3><div class="wx-t">白天 0–5°C｜夜間可到 -3°C</div></div></div>
+      <ul>
+        <li>三案中最冷；乾冷為主，偶有降雪，雪中古城極美。</li>
+        <li>約 16:00 天黑，戶外行程要壓在上午與正午。</li>
+        <li>保暖裝備要升級：發熱衣、羽絨、防滑鞋、暖暖包。</li>
+        <li>好消息：市集、咖啡館、宮殿、博物館都能躲進室內。</li>
+      </ul>
+      <div class="wx-q">👵 關鍵提問：媽媽在台灣 15°C 就喊冷嗎？</div>
+    </div>
+    <div class="wx-card nz">
+      <div class="wx-top"><span class="wx-emo">☀️</span><div><h3>紐西蘭南北島</h3><div class="wx-t">白天 18–24°C｜山區早晚 8–12°C</div></div></div>
+      <ul>
+        <li>當地盛夏，不必穿厚重外套，行動最輕鬆。</li>
+        <li>約 21:30 才天黑，一天可用時間最長。</li>
+        <li>紫外線極強（比台灣高 1.5 倍以上），防曬帽與太陽眼鏡必備。</li>
+        <li>風險在山區天氣說變就變：米佛峽灣與庫克山遇雨即失景。</li>
+      </ul>
+      <div class="wx-q">👵 關鍵提問：比起冷，媽媽更怕長時間坐車嗎？</div>
+    </div>
+    <div class="wx-card fr">
+      <div class="wx-top"><span class="wx-emo">🌧️</span><div><h3>荷蘭・比利時・法國</h3><div class="wx-t">白天 3–8°C｜夜間近 0°C</div></div></div>
+      <ul>
+        <li>溫度比中歐溫和，但濕冷加強風，體感常比數字更低。</li>
+        <li>約 16:30 天黑；12 月雨天偏多，運河與古城散步會打折。</li>
+        <li>強風時雨傘幾乎無用，連帽防水外套才可靠。</li>
+        <li>好消息：博物館、百貨、咖啡館密度最高，雨天備案最強。</li>
+      </ul>
+      <div class="wx-q">👵 關鍵提問：遇上連日陰雨，媽媽會覺得可惜還是無所謂？</div>
+    </div>
   </div>
 </section>
 
 <section id="guide">
   <div class="sec-head">
     <div class="en">Decision Guide</div>
-    <h2>怎麼選？</h2>
+    <h2>怎麼決定？</h2>
+    <p>三個方案沒有優劣，只有適合誰；下面三個問題比任何評分表都準</p>
   </div>
   <div class="guide">
     <div class="gcase">
-      <div class="if">想要 12 月限定的聖誕氣氛、走得舒服、把旅行安排得最穩定</div>
-      <div class="then">→ 選 <a href="cz-at.html">捷克＋奧地利</a><p style="font-size:.82rem;color:var(--muted);margin-top:6px;font-family:var(--zh);font-weight:400">最理性的選擇：城市少、交通簡單、累了容易刪行程。</p></div>
+      <div class="qn">Q1</div>
+      <div class="if2">媽媽比較怕<b>冷</b>，還是比較怕<b>長途坐車</b>？</div>
+      <p>怕冷 → 紐西蘭；怕坐車 → 捷奧或荷比法。這是最大的分水嶺。</p>
     </div>
     <div class="gcase">
-      <div class="if">怕歐洲冬天的冷、想一次看最多不同景觀、未來可能不會再去紐西蘭</div>
-      <div class="then">→ 選 <a href="nz.html">紐西蘭北＋南島</a><p style="font-size:.82rem;color:var(--muted);margin-top:6px;font-family:var(--zh);font-weight:400">最驚艷的選擇：前提是媽媽能接受國內線、換住宿與長途乘車。</p></div>
+      <div class="qn">Q2</div>
+      <div class="if2">巴黎鐵塔、羅浮宮，是不是<b>一定要看</b>的畫面？</div>
+      <p>如果是 → 直接選荷比法，不必再比其他項目。旅行最重要的是完成她期待的畫面。</p>
     </div>
     <div class="gcase">
-      <div class="if">媽媽明確說過：一生至少想看一次巴黎鐵塔、羅浮宮</div>
-      <div class="then">→ 選 <a href="nl-be-fr.html">荷比法</a><p style="font-size:.82rem;color:var(--muted);margin-top:6px;font-family:var(--zh);font-weight:400">最有願望清單意義：如果她最想看巴黎，就不用再比分數。</p></div>
+      <div class="qn">Q3</div>
+      <div class="if2">願不願意<b>搬四次行李</b>，換一次看遍山湖星空？</div>
+      <p>願意 → 紐西蘭值得；覺得麻煩 → 捷奧的「只換一次飯店」就是為此設計。</p>
     </div>
   </div>
-  <div class="verdict">最終排序：<b>捷奧 92</b> ＞ <b>紐西蘭北＋南島 90</b> ＞ <b>荷比法 87</b>｜前兩名差距很小，真正的決勝點是——<b>媽媽比較怕冷，還是比較怕長途坐車？</b></div>
+  <div class="verdict">三個方案我們都做了完整規劃，<b>選哪一個都不會錯</b>——差別只在旅途中媽媽最在意什麼。<br>建議把這三個問題直接問她，答案通常一秒就出現。</div>
 
   <div class="claude-view">
     <div class="cv-head">🤖 Claude 的觀點</div>
-    <p><b>這個加權框架我認同，但有三件事分數看不出來：</b></p>
-    <p><b>① 紐西蘭的 90 分有「隱藏成本」。</b>帳面上只輸捷奧 2 分，但它包含四段飛行（台北—奧克蘭來回＋兩段國內線）與 4 次換宿——每一項單獨看都不難，疊加起來對 60 歲的體感落差會比 2 分大。如果媽媽容易暈車或很在意搬行李，實際體驗可能落在 85 分附近；反之若她精力好、嚮往自然，這 90 分就是實打實的。</p>
-    <p><b>② 荷比法的 87 分是「可修復的低分」。</b>它被扣分的主因——換城市多、容易塞太滿、每天趕預約——正是我們在 V2.0 已經修掉的東西（三選一方案、留白日、每日步數控管）。若巴黎是媽媽的願望，照 V2 執行的實際體驗分我估計在 90 上下，不必因為帳面第三就放棄。</p>
-    <p><b>③ 捷奧唯一的真弱點是「冷」。</b>它在天候風險項目是三案最低分之一：12 月布拉格白天約 0–5°C，比荷比法再冷一截。如果媽媽平常在台灣 15°C 就喊冷，這個第一名要打個問號；保暖裝備的預算和重量也要提前算進去。</p>
-    <p><b>我的建議：直接拿三個問題問媽媽</b>——「妳比較怕冷還是怕坐車？」「巴黎鐵塔是不是一定要看？」「搬四次行李換一次看遍山湖星空，願不願意？」她的答案會比任何評分表準確。</p>
+    <p><b>如果一定要我說，我會這樣看：</b></p>
+    <p><b>捷奧是「最不會出錯」的選擇。</b>只換一次飯店、一次跨國移動，累了刪行程也不會毀掉整天——對第一次帶長輩出國的人，這種容錯率比景點清單更值錢。唯一的真弱點就是冷，而冷是可以用裝備解決的問題。</p>
+    <p><b>紐西蘭是「機會成本最高」的選擇。</b>它的美無可取代，12 月又剛好是最舒服的季節。但四段飛行加四次換宿是實打實的體力支出，這不是規劃能完全消化掉的。適合媽媽精力好、而且你們評估未來不太會再專程飛一趟南半球。</p>
+    <p><b>荷比法是「情感權重最高」的選擇。</b>它在搬行李、天氣上都不是最優，但如果巴黎鐵塔是媽媽講過的願望，那前面所有比較都可以不算數。我們的 V2.0 已經把它最大的缺點（趕、塞太滿）修掉了，蛋奶素在這裡也最好解決。</p>
+    <p><b>最後提醒一件事：</b>你花了很多心力做這些規劃，但真正決定旅行好壞的，往往不是選了哪條路線，而是每天願不願意在媽媽說累的時候刪掉一個景點。這三份行程都幫你預留了那個空間——用得上它，才是這些頁面真正的價值。</p>
   </div>
 </section>
 
